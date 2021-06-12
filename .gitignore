@@ -1,0 +1,10 @@
+.DS_Store
+.idea
+.vscode
+package-lock.json
+node_modules
+src/lib/*
+!src/lib/.gitkeep
+www/bitrix
+www/upload
+www/web.config
