@@ -8,18 +8,36 @@
     <link rel="stylesheet" href="./assets/main.css">
 </head>
 <body>
-  <div class="preloader">
-    <div class="preloader__text">Загрузка...</div>
+  <div id="preloader" class="preloader">
+    <div class="preloader__loading">
+      Загрузка<span class="preloader__loading-dot_number_1">.</span><span class="preloader__loading-dot_number_2">.</span><span class="preloader__loading-dot_number_3">.</span></div>
     <h2 class="preloader__title">
       А у вас уже есть <br>
       Золотая карта от СберБанка?
     </h2>
     <img src="media/preloader/preloader-img.png" alt="" class="preloader__img">
-    <img src="media/preloader/ellipse.svg" alt="" class="preloader__figure-img preloader__figure-img_type_ellipse">
-    <img src="media/preloader/line.svg" alt="" class="preloader__figure-img preloader__figure-img_type_line">
-    <img src="media/preloader/semi-ellipse.svg" alt="" class="preloader__figure-img preloader__figure-img_type_semi-ellipse">
-    <img src="media/preloader/star.svg" alt="" class="preloader__figure-img preloader__figure-img_type_star">
+    <div class="preloader__figures">
+      <img src="media/preloader/ellipse.svg" alt="" class="preloader__figure-img preloader__figure-img_type_ellipse">
+      <img src="media/preloader/line.svg" alt="" class="preloader__figure-img preloader__figure-img_type_line">
+      <img src="media/preloader/semi-ellipse.svg" alt="" class="preloader__figure-img preloader__figure-img_type_semi-ellipse">
+      <img src="media/preloader/star.svg" alt="" class="preloader__figure-img preloader__figure-img_type_star">
+    </div>
   </div>
+  <header class="header">
+    <img src="media/main-logo.svg" alt="" class="header__logo_type_main-logo header__logo">
+    <img src="media/partners/logo/kontur.svg" alt="" class="header__logo_type_partner-logo header__logo">
+  </header>
+  <section class="first-slide container">
+    <h1 class="first-slide__title main-title main-title_color_black">
+      Переходи на <span class="main-title_color_green">Сбер!</span>
+    </h1>
+    <span class="first-slide__sub-title text">С нами удобнее</span>
+    <div class="first-slide__img-wrapper">
+      <div class="first-slide__overlay"></div>
+      <img src="media/partners/photo/SKBKontur.jpg" alt="" class="first-slide__img">
+      <div class="first-slide__scroll-down desc desc_color_white">Листайте вниз</div>
+    </div>
+  </section>
   <section class="features">
 
   </section> 

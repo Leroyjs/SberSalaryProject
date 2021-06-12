@@ -1,0 +1,13 @@
+.header {
+  padding: 0 12px;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 12px;
+  display: flex;
+  justify-content: space-between;
+
+  &__logo {
+    height: 26px;
+  }
+}

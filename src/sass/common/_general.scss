@@ -1,0 +1,74 @@
+body {
+  background-color: $mainBackground;
+  font-family: $fontMain;
+}
+
+.main-title {
+  font-family: $fontMain;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+
+  &_color {
+    &_black {
+      color: $black;
+    }
+
+    &_green {
+      color: $green;
+    }
+  }
+}
+
+.text {
+  font-family: $fontMain;
+  font-style: normal;
+  font-size: 14px;
+
+  &_weight {
+    &_normal {
+      font-weight: normal;
+    }
+  }
+
+  &_color {
+    &_black {
+      color: $black;
+    }
+
+    &_green {
+      color: $green;
+    }
+  }
+}
+
+.desc {
+  font-family: $fontMain;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 120%;
+
+  &_weight {
+    &_normal {
+      font-weight: normal;
+    }
+  }
+
+  &_color {
+    &_white {
+      color: $white;
+    }
+
+    &_black {
+      color: $black;
+    }
+
+    &_green {
+      color: $green;
+    }
+
+    &_grey {
+      color: $grey;
+    }
+  }
+}
