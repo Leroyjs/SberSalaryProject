@@ -6,7 +6,7 @@ const _prevItem = document.querySelector('.slider-features__button_prev');
 const _nextItem = document.querySelector('.slider-features__button_next');
 const _pageDots = document.querySelector('.page-dots');
 
-const imgs = _sliderFeatures.querySelectorAll('.slide-figure');
+const imgs = _sliderFeatures.querySelectorAll('.figures');
 const docStyle = document.documentElement.style;
 const transformProp = typeof docStyle.transform == 'string' ?
     'transform' : 'WebkitTransform';
@@ -15,18 +15,19 @@ const dotsArray = [];
 let activeDot = null;
 
 const featuresSlider = new Flickity(_sliderFeatures, {
-    cellAlign: 'left',
+    cellAlign: 'center',
     percentPosition: false,
     prevNextButtons: false,
-    wrapAround: true,
+    wrapAround: false,
     pageDots: false,
     on: {
         scroll: function () {
             const carousel = this;
             const carouselWidth = carousel.size.width;
-            imgs.forEach(function (img) {
-                // const x = (slide.target + carousel.x) * -1 / 3;
-                const x = (carousel.x % carouselWidth) * (-1 / 6);
+
+            carousel.slides.forEach(function (slide, i) {
+                const img = imgs[i];
+                const x = (slide.target + carousel.x) % carouselWidth * -1 / 5;
                 img.style[transformProp] = 'translateX(' + x + 'px)';
             });
         },
@@ -41,6 +42,11 @@ const featuresSlider = new Flickity(_sliderFeatures, {
 
 for (let i = 0; i < featuresSlider.slides.length; i++) {
     const dotElement = document.createElement('li');
+
+    dotElement.addEventListener('click', () => {
+        featuresSlider.select(i);
+    });
+
     if (i == 0) {
         dotElement.classList.add('page-dots__dot');
         dotElement.classList.add('page-dots__dot_active');
