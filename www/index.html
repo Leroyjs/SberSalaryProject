@@ -8,37 +8,39 @@
     <link rel="stylesheet" href="./assets/main.css">
 </head>
 <body>
-  <div id="preloader" class="preloader">
+<div id="preloader" class="preloader">
     <div class="preloader__loading">
-      Загрузка<span class="preloader__loading-dot_number_1">.</span><span class="preloader__loading-dot_number_2">.</span><span class="preloader__loading-dot_number_3">.</span></div>
+        Загрузка<span class="preloader__loading-dot_number_1">.</span><span
+            class="preloader__loading-dot_number_2">.</span><span class="preloader__loading-dot_number_3">.</span></div>
     <h2 class="preloader__title">
-      А у вас уже есть <br>
-      Золотая карта от Сбера?
+        А у вас уже есть <br>
+        Золотая карта от Сбера?
     </h2>
     <img src="media/preloader/preloader-img.png" alt="" class="preloader__img">
     <div class="preloader__figures">
-      <img src="media/preloader/ellipse.svg" alt="" class="preloader__figure-img preloader__figure-img_type_ellipse">
-      <img src="media/preloader/line.svg" alt="" class="preloader__figure-img preloader__figure-img_type_line">
-      <img src="media/preloader/semi-ellipse.svg" alt="" class="preloader__figure-img preloader__figure-img_type_semi-ellipse">
-      <img src="media/preloader/star.svg" alt="" class="preloader__figure-img preloader__figure-img_type_star">
+        <img src="media/preloader/ellipse.svg" alt="" class="preloader__figure-img preloader__figure-img_type_ellipse">
+        <img src="media/preloader/line.svg" alt="" class="preloader__figure-img preloader__figure-img_type_line">
+        <img src="media/preloader/semi-ellipse.svg" alt=""
+             class="preloader__figure-img preloader__figure-img_type_semi-ellipse">
+        <img src="media/preloader/star.svg" alt="" class="preloader__figure-img preloader__figure-img_type_star">
     </div>
-  </div>
-  <header class="header">
+</div>
+<header class="header">
     <img src="media/main-logo.svg" alt="" class="header__logo_type_main-logo header__logo">
     <img src="media/partners/logo/kontur.svg" alt="" class="header__logo_type_partner-logo header__logo">
-  </header>
-  <section class="first-slide container">
+</header>
+<section class="first-slide container">
     <h1 class="first-slide__title main-title main-title_color_black">
-      Переходи на <span class="main-title_color_green">Сбер!</span>
+        Переходи на <span class="main-title_color_green">Сбер!</span>
     </h1>
     <span class="first-slide__sub-title text">С нами удобнее</span>
     <div class="first-slide__img-wrapper">
-      <div class="first-slide__overlay"></div>
-      <img src="media/partners/photo/SKBKontur.jpg" alt="" class="first-slide__img">
-      <div class="first-slide__scroll-down desc desc_color_white">Листайте вниз</div>
+        <div class="first-slide__overlay"></div>
+        <img src="media/partners/photo/SKBKontur.jpg" alt="" class="first-slide__img">
+        <div class="first-slide__scroll-down desc desc_color_white">Листайте вниз</div>
     </div>
-  </section>
-  <section class="features container">
+</section>
+<section class="features container">
     <div class="features__container">
         <h2 class="features__title">
             Оформите бесплатную золотую карту Сбера
@@ -47,7 +49,14 @@
         <div class="features__slider slider-features">
             <div class="slider-features__item feature">
                 <div class="feature__img-block">
-                    <img src="./media/features/feature_1.jpg" alt="feature 1" class="feature_img">
+                    <div class="feature__img-circle">
+                        <img class="feature__img" src="./media/features/feature_1.jpg" alt="feature 1">
+                    </div>
+
+                    <div class="slide-figure slide-figure_s1-f1"></div>
+                    <div class="slide-figure slide-figure_s1-f2"></div>
+                    <div class="slide-figure slide-figure_s1-f3"></div>
+                    <div class="slide-figure slide-figure_s1-f4"></div>
                 </div>
                 <div class="feature__description">
                     <h3 class="feature__title">
@@ -61,7 +70,14 @@
             </div>
             <div class="slider-features__item feature">
                 <div class="feature__img-block">
-                    <img src="./media/features/feature_1.jpg" alt="feature 1" class="feature_img">
+                    <div class="feature__img-circle">
+                        <img class="feature__img" src="./media/features/feature_1.jpg" alt="feature 1">
+                    </div>
+
+                    <div class="slide-figure slide-figure_s1-f1"></div>
+                    <div class="slide-figure slide-figure_s1-f2"></div>
+                    <div class="slide-figure slide-figure_s1-f3"></div>
+                    <div class="slide-figure slide-figure_s1-f4"></div>
                 </div>
                 <div class="feature__description">
                     <h3 class="feature__title">
@@ -75,7 +91,14 @@
             </div>
             <div class="slider-features__item feature">
                 <div class="feature__img-block">
-                    <img src="./media/features/feature_1.jpg" alt="feature 1" class="feature_img">
+                    <div class="feature__img-circle">
+                        <img class="feature__img" src="./media/features/feature_1.jpg" alt="feature 1">
+                    </div>
+
+                    <div class="slide-figure slide-figure_s1-f1"></div>
+                    <div class="slide-figure slide-figure_s1-f2"></div>
+                    <div class="slide-figure slide-figure_s1-f3"></div>
+                    <div class="slide-figure slide-figure_s1-f4"></div>
                 </div>
                 <div class="feature__description">
                     <h3 class="feature__title">
@@ -95,8 +118,8 @@
                      alt="next">
             </button>
 
-            <ol class="slider-features-page-dots">
-                <li class="dot"></li>
+            <ol class="slider-features__page-dots page-dots">
+
             </ol>
 
             <button class="slider-features__button slider-features__button_prev">
@@ -111,7 +134,7 @@
             </button>
         </div>
     </div>
-  </section>
-  <script src="./assets/main.js"></script>
+</section>
+<script src="./assets/main.js"></script>
 </body>
 </html>
