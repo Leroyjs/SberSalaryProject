@@ -5,3 +5,16 @@
 @import './particles/first-slide';
 @import "./particles/features";
 @import "./particles/promos";
+@import "./particles/acquainted";
+@import './particles/gold-card';
+@import './particles/form-section';
+
+.main-button {
+  &__wrapper {
+    position: fixed;
+    bottom: 12px;
+    z-index: 100;
+    padding: 0 12px;
+    width: 100%;
+  }
+}

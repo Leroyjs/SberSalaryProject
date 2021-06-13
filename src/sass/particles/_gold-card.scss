@@ -1,0 +1,15 @@
+.gold-card {
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 6px;
+  }
+
+  &__button {
+    width: calc(50% - 3px);
+  }
+}

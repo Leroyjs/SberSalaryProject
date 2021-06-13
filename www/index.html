@@ -7,7 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./assets/main.css">
 </head>
-<body>
+<body class="no-scroll">
   <div id="preloader" class="preloader">
     <div class="preloader__loading">
       Загрузка<span class="preloader__loading-dot_number_1">.</span><span class="preloader__loading-dot_number_2">.</span><span class="preloader__loading-dot_number_3">.</span></div>
@@ -15,18 +15,21 @@
       А у вас уже есть <br>
       Золотая карта от Сбера?
     </h2>
-    <img src="media/preloader/preloader-img.png" alt="" class="preloader__img">
+    <img src="media/preloader-img.png" alt="" class="preloader__img">
     <div class="preloader__figures">
-      <img src="media/preloader/ellipse.svg" alt="" class="preloader__figure-img preloader__figure-img_type_ellipse">
-      <img src="media/preloader/line.svg" alt="" class="preloader__figure-img preloader__figure-img_type_line">
-      <img src="media/preloader/semi-ellipse.svg" alt="" class="preloader__figure-img preloader__figure-img_type_semi-ellipse">
-      <img src="media/preloader/star.svg" alt="" class="preloader__figure-img preloader__figure-img_type_star">
+      <img src="media/figures/ellipse.svg" alt="" class="preloader__figure-img preloader__figure-img_type_ellipse">
+      <img src="media/figures/line.svg" alt="" class="preloader__figure-img preloader__figure-img_type_line">
+      <img src="media/figures/semi-ellipse.svg" alt="" class="preloader__figure-img preloader__figure-img_type_semi-ellipse">
+      <img src="media/figures/star.svg" alt="" class="preloader__figure-img preloader__figure-img_type_star">
     </div>
   </div>
   <header class="header">
     <img src="media/main-logo.svg" alt="" class="header__logo_type_main-logo header__logo">
-    <img src="media/partners/logo/kontur.svg" alt="" class="header__logo_type_partner-logo header__logo">
+    <img src="" alt="" id="partner-logo" class="header__logo_type_partner-logo header__logo">
   </header>
+  <div class="main-button__wrapper">
+    <a href="#form-section-ancor" class="main-button button button_green">Узнать больше</a>
+  </div>
   <section class="first-slide container">
     <h1 class="first-slide__title main-title main-title_color_black">
       Переходи на <span class="main-title_color_green">Сбер!</span>
@@ -38,12 +41,12 @@
       <div class="first-slide__scroll-down desc desc_color_white">Листайте вниз</div>
     </div>
   </section>
+  <!--  -->
   <section class="features container">
     <div class="features__container">
         <h2 class="features__title">
             Оформите бесплатную золотую карту Сбера
         </h2>
-
         <div class="features__slider slider-features">
             <div class="slider-features__item feature">
                 <div class="feature__img-block">
@@ -88,7 +91,6 @@
                 </div>
             </div>
         </div>
-
         <div class="features__controls">
             <button class="slider-features__button slider-features__button_next">
                 <img class="slider-features__img-btn slider-features__img-btn_next" src="./media/features/arrow.svg"
@@ -112,6 +114,91 @@
         </div>
     </div>
   </section>
+  <section class="acquainted container">
+    <h2 class="main-title acquainted__title main-title_color_black">
+      Давайте познакомимся
+      поближе?
+    </h2>
+    <div class="acquainted__main-content">
+      <img src="media/card.png" alt="" class="acquainted__card">
+      <div class="acquainted__substrate-wrapper">
+        <img src="media/substrate.svg" alt="" class="acquainted__substrate">
+      </div>
+      <div class="acquainted__figures">
+        <img src="media/figures/ellipse.svg" alt="" class="acquainted__figure-img acquainted__figure-img_type_ellipse">
+        <img src="media/figures/line.svg" alt="" class="acquainted__figure-img acquainted__figure-img_type_line">
+        <img src="media/figures/semi-ellipse.svg" alt="" class="acquainted__figure-img acquainted__figure-img_type_semi-ellipse">
+        <img src="media/figures/star.svg" alt="" class="acquainted__figure-img acquainted__figure-img_type_star">
+      </div>
+    </div>
+  </section>
+  <section class="gold-card container">
+    <h2 class="title title_color_black gold-card__title">
+      У вас уже есть золотая карта
+      Сбера?
+    </h2>
+    <div class="gold-card__buttons">
+      <a href="/" class="semi-button semi-button_gray gold-card__button">
+        У меня есть <br>
+        золотая карта
+      </a>
+      <a href="/" class="semi-button semi-button_gray gold-card__button">
+        У меня нет <br>
+        золотой карты
+      </a>
+    </div>
+  </section>
+  <section class="form-section container">
+    <div class="ancor" id="form-section-ancor" ></div>
+    <div class="form-section__inner">
+      <h2 class="title title_color_green form-section__title">
+        Если остались вопросы
+        напишите нам 
+        и мы вам перезвоним
+      </h2>
+      <span class="form-section__hello desc desc_color_gray">Здравствуйте, сотрудник <span id="form-main-input-hello-chenge" class="link form-section__hello-chenge">Контур</span></span>
+      <form class="form-section__form form-main" id="form-main">
+        <div class="form-main__input-wrapper">
+          <input type="text" class="form-main__input" placeholder="Введите ваше имя" id="form-main-input-name">
+          <div id="form-main-name-error" class="form-main__error">Текст ошибки</div>
+        </div>
+        <div class="form-main__input-wrapper">
+          <input type="text" class="form-main__input" placeholder="Введите ваш номер телефона" id="form-main-input-phone">
+          <div id="form-main-phone-error" class="form-main__error">Ошибка</div>
+        </div>
+        <button class="button button_green form-main__button">Оставить заявку на звонок</button>
+      </form>
+      <div class="form-section__personal-policy desc desc_color_gray">
+        Нажимая на&nbsp;кнопку &laquo;Отправить&raquo;, я&nbsp;соглашаюсь с&nbsp;условиями обработки <a href="" class="link">персональных данных</a>
+      </div>
+      <a href="" class="form-section__application-form">
+        <img src="media/pdf-icon.svg" alt="" class="form-section__application-form-icon">
+        <span class="link desc">Форма заявления</span>
+      </a>
+      <div class="form-section__cop desc desc_color_gray">
+        © 1997—2021 ПАО СберБанк
+        <br>
+        <br>
+        Россия, Москва, 117997, ул. Вавилова, 19. Генеральная лицензия 
+        на осуществление банковских операций от 11 августа 2015 года. 
+        Регистрационный номер — 1481.
+      </div>
+    </div>
+  </section>
+  <div id="modal-chenge-company" class="modal change-company container">
+    <h2 class="title title_color_white change-company__title">
+      Вы работаете в организации
+      <span id="change-company__company-name" class="change-company__company">Контур</span>?
+    </h2>
+    <div class="change-company__desc desc desc_color_white">
+      Если информация не верная, то введите название организации в которой вы работаете
+    </div>
+    <form id="change-company__form" class="change-company__form">
+      <input value="" type="text" class="change-company__input" placeholder="Введите название организации">
+      <button class="change-company__button button button_green">Подтвердить</button>
+    </form>
+    <button id="change-company-cancel" class="change-company__button-cancel button button_gray">Отмена</button>
+  </div>
   <script src="./assets/main.js"></script>
 </body>
 </html>

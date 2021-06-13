@@ -1,0 +1,90 @@
+.acquainted {
+  // overflow: hidden;
+
+  &__main-content {
+    padding: 22px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  &__substrate {
+    animation: substrate-animation 3s infinite;
+    animation-direction: alternate;
+  }
+
+  &__substrate-wrapper {
+    overflow: hidden;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    bottom: 50%;
+    height: 200vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(50%)
+  }
+
+  // &__card {
+  //   position: relative;
+  //   z-index: 0;
+  // }
+
+  &__figures {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    height: 100%;
+    transform: translateY(0px);
+  }
+
+  &__title {
+    margin-bottom: 16px;
+  }
+
+  &__figure-img {
+    position: absolute;
+
+    &_type {
+      &_star {
+        right: 63px;
+        bottom: 156px;
+        animation: star-animation 3s infinite;
+        animation-direction: alternate;
+      }
+
+      &_line {
+        left: 0;
+        bottom: 0;
+        animation: line-aimation 6s infinite;
+        animation-direction: alternate;
+      }
+
+      &_ellipse {
+        right: 0;
+        bottom: 136px;
+        animation: ellipse-animation 3s infinite;
+        animation-direction: alternate;
+      }
+
+      &_semi-ellipse {
+        left: 0;
+        bottom: 85px;
+        animation: semi-ellipse-animation 3s infinite;
+        animation-direction: alternate;
+      }
+    }
+  }
+}
+
+@keyframes substrate-animation {
+  0% {
+    transform: scale(1.7) rotate(0);
+  }
+
+  100% {
+    transform: scale(1.2) rotate(30deg);
+  }
+}

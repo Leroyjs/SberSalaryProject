@@ -3,11 +3,26 @@ body {
   font-family: $fontMain;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
+section {
+  margin-bottom: 44px;
+  position: relative;
+}
+
+.ancor {
+  position: absolute;
+  top: -60px;
+}
+
 .main-title {
+  text-align: center;
   font-family: $fontMain;
   font-style: normal;
   font-weight: 600;
-  font-size: 28px;
+  font-size: 26px;
 
   &_color {
     &_black {
@@ -16,6 +31,33 @@ body {
 
     &_green {
       color: $green;
+    }
+  }
+}
+
+.title {
+  text-align: center;
+  font-family: $fontMain;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 140%;
+
+  &_color {
+    &_white {
+      color: $white;
+    }
+
+    &_black {
+      color: $black;
+    }
+
+    &_green {
+      color: $green;
+    }
+
+    &_gray {
+      color: $gray;
     }
   }
 }
@@ -67,8 +109,8 @@ body {
       color: $green;
     }
 
-    &_grey {
-      color: $grey;
+    &_gray {
+      color: $gray;
     }
   }
 }
@@ -82,6 +124,7 @@ body {
   border-radius: 24px;
   cursor: pointer;
   width: 100%;
+  display: block;
 
   font-style: normal;
   font-weight: 600;
@@ -90,9 +133,7 @@ body {
   text-align: center;
   padding: 15px;
 
-  color: #FFFFFF;
-
-  padding: 15px;
+  color: $white;
 
   &_half {
     padding: 6px;
@@ -100,14 +141,76 @@ body {
 
 
   &_gray {
-    background: #404040;
+    background: $black;
 
     &:hover {
-      background: #404040;
+      background: $black;
     }
   }
 
   &_green {
-    background: #23E87D;
+    background: $green;
+  }
+}
+
+.semi-button {
+  border-radius: 24px;
+  cursor: pointer;
+  width: 100%;
+
+  font-family: $fontMain;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 140%;
+  text-align: center;
+  padding: 6px;
+
+  color: $white;
+
+  &_gray {
+    background: $black;
+
+    &:hover {
+      background: $black;
+    }
+  }
+
+  &_green {
+    background: $green;
+  }
+}
+
+.link {
+  position: relative;
+  display: inline-block;
+  color: $black;
+  font-weight: 600;
+  cursor: pointer;
+
+  &::after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: $black;
+  }
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(38, 38, 38, 0.94);
+  z-index: 999;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .3s;
+
+  &_active {
+    opacity: 1;
+    visibility: visible;
   }
 }

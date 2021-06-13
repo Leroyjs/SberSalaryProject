@@ -1,0 +1,126 @@
+.form-section {
+  margin-bottom: 6px;
+
+  &__title {
+    margin-bottom: 8px;
+  }
+
+  &__inner {
+    background-color: $white;
+    padding: 32px 6px;
+    padding-bottom: 58px;
+    border-radius: 28px;
+  }
+
+  &__hello {
+    text-align: center;
+    width: 100%;
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  &__personal-policy {
+    text-align: center;
+  }
+
+  &__application-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 32px;
+  }
+
+  &__application-form-icon {
+    margin-bottom: 12px;
+  }
+
+  &__cop {
+    margin-top: 32px;
+    text-align: center;
+    padding-bottom: 32px;
+  }
+}
+
+.form-main {
+  &__input-wrapper {
+    width: 100%;
+    margin-top: 20px;
+    font-size: 10px;
+  }
+
+  &__error {
+    margin-top: 2px;
+    color: red;
+    display: none;
+  }
+
+  &__button {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+
+  &__input {
+    width: 100%;
+    padding-bottom: 12px;
+    border-bottom: 1px solid $gray;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 140%;
+
+    color: $black;
+
+    &:focus {
+      border-bottom: 1px solid $green;
+    }
+  }
+}
+
+.change-company {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__form {
+    width: 100%;
+  }
+
+  &__title {
+    margin-bottom: 12px;
+  }
+
+  &__desc {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+
+  &__input {
+    padding-bottom: 12px;
+    background: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    margin-bottom: 24px;
+    width: 100%;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 140%;
+    /* or 22px */
+
+    color: $white;
+
+    &:focus {
+      border-bottom: 1px solid $white;
+    }
+  }
+
+  &__company {
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  &__button-cancel {
+    margin-top: 8px;
+  }
+}

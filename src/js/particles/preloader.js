@@ -2,5 +2,6 @@ export const initPreloader = () => {
   const _body = document.body;
   setTimeout(() => {
     _body.classList.add('loaded');
-  }, 0);
+    _body.classList.remove('no-scroll');
+  }, 5000);
 };

@@ -36,7 +36,7 @@ $preloaderDoneAnimationDuration:.5s;
     font-size: 12px;
     line-height: 120%;
 
-    color: $grey;
+    color: $gray;
 
     &-dot {
       &_number {
@@ -154,53 +154,5 @@ $preloaderDoneAnimationDuration:.5s;
 
   100% {
     opacity: 1;
-  }
-}
-
-@keyframes star-animation {
-  0% {
-    transform: rotateX(-20deg) rotateY(15deg);
-  }
-
-  50% {
-    transform: rotateX(-20deg) rotateY(0deg);
-  }
-
-  100% {
-    transform: rotateX(20deg) rotateY(-30deg) translateX(5px) translateY(5px);
-  }
-}
-
-@keyframes line-aimation {
-  0% {
-    transform: rotateX(20deg) rotateY(-15deg);
-  }
-
-  50% {
-    transform: rotateX(-20deg) rotateY(0deg);
-  }
-
-  100% {
-    transform: rotateX(20deg) rotateY(15deg);
-  }
-}
-
-@keyframes ellipse-animation {
-  0% {
-    transform: rotateX(0deg) rotateY(15deg);
-  }
-
-  100% {
-    transform: rotateX(20deg) rotateY(-15deg);
-  }
-}
-
-@keyframes semi-ellipse-animation {
-  0% {
-    transform: rotateX(-20deg) rotateY(15deg);
-  }
-
-  100% {
-    transform: rotateX(0deg) rotateY(-10deg) rotateZ(10deg) translateX(-5px) translateY(-10px);
   }
 }
