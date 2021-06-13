@@ -10,10 +10,11 @@
 <body class="no-scroll">
   <div id="preloader" class="preloader">
     <div class="preloader__loading">
-      Загрузка<span class="preloader__loading-dot_number_1">.</span><span class="preloader__loading-dot_number_2">.</span><span class="preloader__loading-dot_number_3">.</span></div>
+        Загрузка<span class="preloader__loading-dot_number_1">.</span><span
+            class="preloader__loading-dot_number_2">.</span><span class="preloader__loading-dot_number_3">.</span></div>
     <h2 class="preloader__title">
-      А у вас уже есть <br>
-      Золотая карта от Сбера?
+        А у вас уже есть <br>
+        Золотая карта от Сбера?
     </h2>
     <img src="media/preloader-img.png" alt="" class="preloader__img">
     <div class="preloader__figures">
@@ -22,8 +23,8 @@
       <img src="media/figures/semi-ellipse.svg" alt="" class="preloader__figure-img preloader__figure-img_type_semi-ellipse">
       <img src="media/figures/star.svg" alt="" class="preloader__figure-img preloader__figure-img_type_star">
     </div>
-  </div>
-  <header class="header">
+</div>
+<header class="header">
     <img src="media/main-logo.svg" alt="" class="header__logo_type_main-logo header__logo">
     <img src="" alt="" id="partner-logo" class="header__logo_type_partner-logo header__logo">
   </header>
@@ -32,13 +33,13 @@
   </div>
   <section class="first-slide container">
     <h1 class="first-slide__title main-title main-title_color_black">
-      Переходи на <span class="main-title_color_green">Сбер!</span>
+        Переходи на <span class="main-title_color_green">Сбер!</span>
     </h1>
     <span class="first-slide__sub-title text">С нами удобнее</span>
     <div class="first-slide__img-wrapper">
-      <div class="first-slide__overlay"></div>
-      <img src="media/partners/photo/SKBKontur.jpg" alt="" class="first-slide__img">
-      <div class="first-slide__scroll-down desc desc_color_white">Листайте вниз</div>
+        <div class="first-slide__overlay"></div>
+        <img src="media/partners/photo/SKBKontur.jpg" alt="" class="first-slide__img">
+        <div class="first-slide__scroll-down desc desc_color_white">Листайте вниз</div>
     </div>
   </section>
   <!--  -->
@@ -50,7 +51,18 @@
         <div class="features__slider slider-features">
             <div class="slider-features__item feature">
                 <div class="feature__img-block">
-                    <img src="./media/features/feature_1.jpg" alt="feature 1" class="feature_img">
+                    <div class="feature__img-circle">
+                        <img class="feature__img" src="./media/features/feature_1.jpg" alt="feature 1">
+                    </div>
+
+                    <div class="feature__figures">
+                        <div class="figures">
+                            <div class="slide-figure slide-figure_s1-f1"></div>
+                            <div class="slide-figure slide-figure_s1-f2"></div>
+                            <div class="slide-figure slide-figure_s1-f3"></div>
+                            <div class="slide-figure slide-figure_s1-f4"></div>
+                        </div>
+                    </div>
                 </div>
                 <div class="feature__description">
                     <h3 class="feature__title">
@@ -64,7 +76,18 @@
             </div>
             <div class="slider-features__item feature">
                 <div class="feature__img-block">
-                    <img src="./media/features/feature_1.jpg" alt="feature 1" class="feature_img">
+                    <div class="feature__img-circle">
+                        <img class="feature__img" src="./media/features/feature_1.jpg" alt="feature 1">
+                    </div>
+
+                    <div class="feature__figures">
+                        <div class="figures">
+                            <div class="slide-figure slide-figure_s1-f1"></div>
+                            <div class="slide-figure slide-figure_s1-f2"></div>
+                            <div class="slide-figure slide-figure_s1-f3"></div>
+                            <div class="slide-figure slide-figure_s1-f4"></div>
+                        </div>
+                    </div>
                 </div>
                 <div class="feature__description">
                     <h3 class="feature__title">
@@ -78,7 +101,18 @@
             </div>
             <div class="slider-features__item feature">
                 <div class="feature__img-block">
-                    <img src="./media/features/feature_1.jpg" alt="feature 1" class="feature_img">
+                    <div class="feature__img-circle">
+                        <img class="feature__img" src="./media/features/feature_1.jpg" alt="feature 1">
+                    </div>
+
+                    <div class="feature__figures">
+                        <div class="figures">
+                            <div class="slide-figure slide-figure_s1-f1"></div>
+                            <div class="slide-figure slide-figure_s1-f2"></div>
+                            <div class="slide-figure slide-figure_s1-f3"></div>
+                            <div class="slide-figure slide-figure_s1-f4"></div>
+                        </div>
+                    </div>
                 </div>
                 <div class="feature__description">
                     <h3 class="feature__title">
@@ -93,16 +127,16 @@
         </div>
         <div class="features__controls">
             <button class="slider-features__button slider-features__button_next">
-                <img class="slider-features__img-btn slider-features__img-btn_next" src="./media/features/arrow.svg"
+                <img class="slider-features__img-btn slider-features__img-btn_next" src="./media/arrow.svg"
                      alt="next">
             </button>
 
-            <ol class="slider-features-page-dots">
-                <li class="dot"></li>
+            <ol class="slider-features__page-dots page-dots">
+
             </ol>
 
             <button class="slider-features__button slider-features__button_prev">
-                <img class="slider-features__img-btn slider-features__img-btn_prev" src="./media/features/arrow.svg"
+                <img class="slider-features__img-btn slider-features__img-btn_prev" src="./media/arrow.svg"
                      alt="prev">
             </button>
         </div>
@@ -110,6 +144,54 @@
         <div class="features__action">
             <button class="button button_gray">
                 Перейти на Сбер
+            </button>
+        </div>
+    </div>
+  </section>
+  <section class="promos container">
+    <div class="promos__container">
+        <h2 class="promos__title">
+            Со <span class="promos__title promos__title--link">Сбером</span> вам будет удобнее!
+        </h2>
+
+        <div class="promos__slider slider-promos">
+            <div class="slider-promos__item promo">
+                <div class="video__main player" data-video-id="6xSv4LBnjnA">
+                    <div class="player__content">
+                        <div class="player__content-filter">
+                        </div>
+                        <div class="player__btn">
+                            <img class="player__btn-img" src="./media/player-btn.svg" alt="play">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-promos__item promo">
+                <div class="video__main player" data-video-id="6xSv4LBnjnA">
+                    <div class="player__content">
+                        <div class="player__content-filter">
+                        </div>
+                        <div class="player__btn">
+                            <img class="player__btn-img" src="./media/player-btn.svg" alt="play">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="promos__controls">
+            <button class="slider-promos__button slider-promos__button_next">
+                <img class="slider-promos__img-btn slider-promos__img-btn_next" src="./media/arrow.svg"
+                     alt="next">
+            </button>
+
+            <ol class="slider-promos__page-dots page-dots">
+
+            </ol>
+
+            <button class="slider-promos__button slider-promos__button_prev">
+                <img class="slider-promos__img-btn slider-promos__img-btn_prev" src="./media/arrow.svg"
+                     alt="prev">
             </button>
         </div>
     </div>
@@ -199,6 +281,7 @@
     </form>
     <button id="change-company-cancel" class="change-company__button-cancel button button_gray">Отмена</button>
   </div>
-  <script src="./assets/main.js"></script>
+</section>
+<script src="./assets/main.js"></script>
 </body>
 </html>
