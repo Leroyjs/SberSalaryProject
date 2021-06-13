@@ -1,0 +1,41 @@
+@function get-vw($px-vw, $base-vw: 1280px) {
+  @return ($px-vw * 100vw) / $base-vw;
+}
+
+@function get-vh($px-vh, $base-vh: 600px) {
+  @return ($px-vh * 100vh) / $base-vh;
+}
+
+@mixin font-size($f-size: 12px) {
+  font-size: $f-size;
+
+  @media (min-width: $bp-xxl-1442) {
+    font-size: #{get-vw($f-size, $bp-xxl-1442)};
+  }
+
+  @media (max-width: #{$bp-lg-979}) {
+    font-size: #{get-vw($f-size, $bp-lg-979)};
+  }
+
+  @media (max-width: #{$bp-sm-576}) {
+    font-size: #{get-vw($f-size, $bp-sm-576)};
+  }
+}
+
+@mixin _more-than($resolution: 180px) {
+  @media (min-width: $resolution) {
+    @content;
+  }
+}
+
+@mixin _less-than($resolution: 1170px) {
+  @media (max-width: $resolution) {
+    @content;
+  }
+}
+
+@mixin _less-than-height($resolution: 1170px) {
+  @media (max-height: $resolution) {
+    @content;
+  }
+}

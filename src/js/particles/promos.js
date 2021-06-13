@@ -80,7 +80,6 @@ export const initPromoSlider = () => {
         },
     });
 
-
     for (let i = 0; i < promoSlider.slides.length; i++) {
         const dotElement = document.createElement('li');
 
