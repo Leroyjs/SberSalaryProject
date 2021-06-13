@@ -1,5 +1,12 @@
 .acquainted {
-  // overflow: hidden;
+
+  &_no-card {
+    padding-top: 110px;
+  }
+
+  &_yes-card {
+    padding-top: 110px;
+  }
 
   &__main-content {
     padding: 22px 0;
@@ -27,17 +34,18 @@
     transform: translateY(50%)
   }
 
-  // &__card {
-  //   position: relative;
-  //   z-index: 0;
-  // }
-
   &__figures {
     position: absolute;
     bottom: 15px;
     width: 100%;
     height: 100%;
     transform: translateY(0px);
+  }
+
+  &__subtitle {
+    text-align: center;
+    padding: 0 20px;
+    margin-bottom: 8px;
   }
 
   &__title {
@@ -76,6 +84,14 @@
         animation-direction: alternate;
       }
     }
+  }
+
+  &__instruction {
+
+  }
+
+  &__action {
+    margin-top: 24px;
   }
 }
 
