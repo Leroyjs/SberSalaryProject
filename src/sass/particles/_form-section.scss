@@ -2,7 +2,14 @@
   margin-bottom: 6px;
 
   &__title {
+    margin: 0 auto;
     margin-bottom: 8px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   &__inner {
@@ -46,6 +53,10 @@
     width: 100%;
     margin-top: 20px;
     font-size: 10px;
+
+    &__no-company {
+      display: none;
+    }
   }
 
   &__error {
@@ -122,5 +133,85 @@
 
   &__button-cancel {
     margin-top: 8px;
+  }
+}
+
+.no-company {
+  .form-section__hello {
+    display: none;
+  }
+
+  .form-main {
+    &__input-wrapper {
+      &__no-company {
+        display: block;
+      }
+    }
+  }
+}
+
+@media screen and (min-width:600px) {
+  .form-main {
+    &__input-wrapper {
+      width: 320px;
+    }
+  }
+
+  .form-section {
+    margin-bottom: 12px;
+
+    &__inner {
+      padding-bottom: 70px;
+    }
+
+    &__personal-policy {
+      width: 320px;
+      margin: 0 auto;
+    }
+
+    &__title {
+      width: 360px;
+    }
+
+    &__application-form {
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    &__application-form-icon {
+      margin-bottom: 0;
+      margin-right: 8px;
+      width: 24px;
+      height: 24px;
+    }
+
+    &__cop {
+      width: 464px;
+      margin: 0 auto;
+      margin-top: 35px;
+    }
+  }
+}
+
+@media screen and (min-width:1000px) {
+  .form-section {
+    margin-bottom: 20px;
+
+    &__inner {
+      padding-top: 20px;
+    }
+
+    &__title {
+      width: 500px;
+      margin-bottom: 20px;
+    }
+
+    &__hello {
+      margin-bottom: 20px;
+    }
+
+    &__application-form {
+      margin-top: 40px;
+    }
   }
 }

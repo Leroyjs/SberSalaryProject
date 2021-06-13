@@ -13,3 +13,12 @@
     width: calc(50% - 3px);
   }
 }
+
+@media screen and (min-width:600px) {
+  .gold-card {
+    &__buttons {
+      margin: 0 auto;
+      width: 424px;
+    }
+  }
+}

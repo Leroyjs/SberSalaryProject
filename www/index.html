@@ -216,7 +216,7 @@
   </section>
   <section class="gold-card container">
     <h2 class="title title_color_black gold-card__title">
-      У вас уже есть золотая карта
+      У вас уже есть <span class="title_color_green">золотая карта</span><br>
       Сбера?
     </h2>
     <div class="gold-card__buttons">
@@ -230,11 +230,11 @@
       </a>
     </div>
   </section>
-  <section class="form-section container">
+  <section id="form-section" class="form-section container">
     <div class="ancor" id="form-section-ancor" ></div>
     <div class="form-section__inner">
       <h2 class="title title_color_green form-section__title">
-        Если остались вопросы
+        Если остались вопросы <br>
         напишите нам 
         и мы вам перезвоним
       </h2>
@@ -247,6 +247,10 @@
         <div class="form-main__input-wrapper">
           <input type="text" class="form-main__input" placeholder="Введите ваш номер телефона" id="form-main-input-phone">
           <div id="form-main-phone-error" class="form-main__error">Ошибка</div>
+        </div>
+        <div class="form-main__input-wrapper form-main__input-wrapper__no-company">
+          <input type="text" class="form-main__input" placeholder="Введите название организации" id="form-main-input-company">
+          <div id="form-main-company-error" class="form-main__error">Текст ошибки</div>
         </div>
         <button class="button button_green form-main__button">Оставить заявку на звонок</button>
       </form>

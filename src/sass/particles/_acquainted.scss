@@ -1,6 +1,4 @@
 .acquainted {
-  // overflow: hidden;
-
   &__main-content {
     padding: 22px 0;
     display: flex;
@@ -14,23 +12,22 @@
     animation-direction: alternate;
   }
 
+  &__card {
+    width: calc(100vw - 60px);
+  }
+
   &__substrate-wrapper {
     overflow: hidden;
-    width: 100%;
+    width: 100vw;
     position: absolute;
     z-index: -1;
     bottom: 50%;
-    height: 200vh;
+    height: 200%;
     display: flex;
     align-items: center;
     justify-content: center;
     transform: translateY(50%)
   }
-
-  // &__card {
-  //   position: relative;
-  //   z-index: 0;
-  // }
 
   &__figures {
     position: absolute;
@@ -42,6 +39,8 @@
 
   &__title {
     margin-bottom: 16px;
+    max-width: 320px;
+    margin: 0 auto;
   }
 
   &__figure-img {
@@ -86,5 +85,68 @@
 
   100% {
     transform: scale(1.2) rotate(30deg);
+  }
+}
+
+@media screen and(min-width:400px) {
+  .acquainted {
+    &__figure-img {
+      &_type {
+        &_ellipse {
+          bottom: 190px;
+          width: 120px;
+        }
+
+        &_semi-ellipse {
+          width: 80px;
+        }
+
+        &_line {
+          width: 170px;
+        }
+
+        &_star {
+          bottom: 170px;
+          width: 100px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and(min-width:450px) {
+  .acquainted {
+    &__card {
+      width: 400px;
+    }
+
+    &__figures {
+      width: 420px;
+    }
+
+    &__figure-img {
+      &_type {
+        &_ellipse {
+          width: 150px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and(min-width:600px) {
+  .acquainted {
+    &__title {
+      max-width: 400px;
+    }
+  }
+}
+
+@media screen and(min-width:1000px) {
+  .acquainted {
+    &__title {
+      max-width: 600px;
+      margin-bottom: 10px;
+    }
   }
 }

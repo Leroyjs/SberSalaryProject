@@ -1,6 +1,8 @@
 body {
   background-color: $mainBackground;
   font-family: $fontMain;
+  overflow-x: hidden;
+  position: relative;
 }
 
 .no-scroll {
@@ -10,6 +12,10 @@ body {
 section {
   margin-bottom: 44px;
   position: relative;
+}
+
+input {
+  font-family: $fontMain;
 }
 
 .ancor {
@@ -121,6 +127,7 @@ section {
 }
 
 .button {
+  font-family: $fontMain;
   border-radius: 24px;
   cursor: pointer;
   width: 100%;
@@ -154,6 +161,7 @@ section {
 }
 
 .semi-button {
+  font-family: $fontMain;
   border-radius: 24px;
   cursor: pointer;
   width: 100%;
@@ -214,3 +222,56 @@ section {
     visibility: visible;
   }
 }
+
+@media screen and (min-width:600px) {
+  .button {
+    max-width: 320px;
+  }
+
+  .container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .semi-button {
+    max-width: 206px;
+  }
+
+  section {
+    margin-bottom: 60px;
+  }
+
+  .main-title {
+    font-size: 32px;
+  }
+}
+
+@media screen and (min-width:1000px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .main-title {
+    font-size: 48px;
+  }
+
+  .title {
+    font-size: 26px;
+  }
+
+  .text {
+    font-size: 18px;
+  }
+
+  section {
+    margin-bottom: 80px;
+  }
+}
+
+// @media screen and (min-width:1400px) {
+//   .container {
+//     padding-left: 40px;
+//     padding-right: 40px;
+//   }
+// }

@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'SB Sans Interface';
+  src: url('~/fonts/SBSansUI-Semibold.woff2') format('woff2'),
+    url('~/fonts/SBSansUI-Semibold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SB Sans Interface';
+  src: url('~/fonts/SBSansUI-Regular.woff2') format('woff2'),
+    url('~/fonts/SBSansUI-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

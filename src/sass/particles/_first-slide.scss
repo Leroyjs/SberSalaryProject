@@ -46,3 +46,30 @@
     position: absolute;
   }
 }
+
+@media screen and(min-width:600px) {
+  .first-slide {
+    padding-bottom: 12px;
+
+    &__sub-title {
+      margin-bottom: 40px;
+    }
+
+    &__scroll-down {
+      bottom: 86px;
+    }
+  }
+}
+
+@media screen and(min-width:1000px) {
+  .first-slide {
+    padding-top: 180px;
+    padding-bottom: 20px;
+  }
+}
+
+// @media screen and (min-width:1400px) {
+  //   .first-slide {
+  //     padding-bottom: 40px;
+  //   }
+  // }

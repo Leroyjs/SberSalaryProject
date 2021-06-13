@@ -1,6 +1,5 @@
 export const getActiveCompanyByGetParameter = () => {
   const company = getParam('company');
-  console.log(company);
   return company;
 };
 function getParam(key) {

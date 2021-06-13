@@ -18,3 +18,29 @@
     width: 100%;
   }
 }
+
+@media screen and (min-width:600px) {
+  .main-button {
+    &__wrapper {
+      bottom: 30px;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+@media screen and (min-width:600px) {
+  .main-button {
+    &__wrapper {
+      bottom: 40px;
+    }
+  }
+}
+
+// @media screen and (min-width:1400px) {
+  //   .main-button {
+  //     &__wrapper {
+  //       bottom: 60px;
+  //     }
+  //   }
+  // }

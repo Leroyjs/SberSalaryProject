@@ -41,8 +41,14 @@ function chengeFormCompany(company) {
   const _companyNameInModal = document.getElementById(
     'change-company__company-name'
   );
+  const _form = document.getElementById('form-section');
   _companyNameInModal.innerText = company;
   _formMainInputHelloChenge.innerText = company;
+  if (company) {
+    _form.classList.remove('no-company');
+  } else {
+    _form.classList.add('no-company');
+  }
 }
 
 function chengeLogo(logoName) {
