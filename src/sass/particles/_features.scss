@@ -36,6 +36,13 @@
     width: 100%;
     padding: 20px 42px;
   }
+
+  &__action {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .features {
@@ -64,6 +71,9 @@
 
   &__action {
     margin-top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
