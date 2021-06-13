@@ -12,6 +12,32 @@
   }
 }
 
+.features-grid {
+  display: none;
+
+  &__container {
+    position: relative;
+    margin: 0 auto;
+    background: #FBFBFB;
+    border-radius: 32px;
+    padding: 40px;
+  }
+
+  &__content {
+    margin: -20px auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__item {
+    width: 100%;
+    padding: 20px 42px;
+  }
+}
+
 .features {
   &__container {
     background: #FBFBFB;
@@ -21,7 +47,6 @@
 
   &__title {
     text-align: center;
-
     padding: 26px 26px 24px;
   }
 
@@ -74,6 +99,7 @@
     border-radius: 50%;
     min-width: 32px;
     height: 32px;
+    margin: 0 24px;
 
     &_next {
     }
@@ -206,5 +232,135 @@
 
     left: 74px;
     top: 90px;
+  }
+}
+
+.features-grid-figure {
+  position: absolute;
+  border-radius: 50%;
+
+  &_f1 {
+    background: #C1B2FF;
+    width: 70px;
+    height: 70px;
+
+    left: 0px;
+    top: 0px;
+
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  &_f2 {
+    background: #0099F9;
+    width: 16px;
+    height: 16px;
+
+    left: 230px;
+    top: 0px;
+
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  &_f3 {
+    background: #9BFFE1;
+    width: 64px;
+    height: 64px;
+
+    right: 0;
+    top: 0;
+    transform: translateY(-10%);
+  }
+
+  &_f4 {
+    background: #9BFFE1;
+    width: 50px;
+    height: 50px;
+
+    left: 42px;
+    top: 112px;
+  }
+
+  &_f5 {
+    background: #0099F9;
+    width: 32px;
+    height: 32px;
+
+    right: 30px;
+    top: 40%;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .features {
+    display: none;
+  }
+
+  .features-grid {
+    display: block;
+
+    &__title {
+
+    }
+
+    &__content {
+      display: flex;
+    }
+
+    &__action {
+      margin-top: 52px;
+    }
+
+    &__item {
+
+    }
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .features-grid {
+    display: block;
+
+    &__title {
+
+    }
+
+    &__content {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      max-width: 980px;
+    }
+
+    &__action {
+      margin-top: 52px;
+    }
+
+    &__item {
+      width: 50%;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .features-grid {
+    display: block;
+
+    &__title {
+
+    }
+
+    &__content {
+
+    }
+
+    &__action {
+      margin-top: 52px;
+    }
+
+    &__item {
+      width: 33.33%;
+    }
   }
 }
