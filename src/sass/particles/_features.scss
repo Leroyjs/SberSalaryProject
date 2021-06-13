@@ -1,5 +1,4 @@
 .features {
-
   &__container {
     background: #FBFBFB;
     border-radius: 28px;
@@ -7,21 +6,12 @@
   }
 
   &__title {
-    font-style: normal;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 140%;
-
     text-align: center;
-
-    color: #23E87D;
 
     padding: 26px 26px 24px;
   }
 
-  &__slider {
-
-  }
+  &__slider {}
 
   &__controls {
     display: flex;
@@ -68,13 +58,9 @@
     min-width: 32px;
     height: 32px;
 
-    &_next {
+    &_next {}
 
-    }
-
-    &_prev {
-
-    }
+    &_prev {}
   }
 
   &__img-btn {
@@ -84,9 +70,7 @@
       transform: rotateZ(180deg);
     }
 
-    &_prev {
-
-    }
+    &_prev {}
   }
 
   &__item {

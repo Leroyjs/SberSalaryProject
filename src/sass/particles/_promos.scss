@@ -5,23 +5,14 @@
   }
 
   &__title {
-    font-style: normal;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 140%;
-
     text-align: center;
 
-    color: #404040;
-
-    padding: 26px 26px 0px;
-
-    &--link {
-      padding: 0;
-      margin: 0;
-      display: inline;
-      color: #23E87D;
-    }
+    // &--link {
+    //   padding: 0;
+    //   margin: 0;
+    //   display: inline;
+    //   color: #23E87D;
+    // }
   }
 
   &__slider {
@@ -75,13 +66,9 @@
     height: 32px;
     cursor: pointer;
 
-    &_next {
+    &_next {}
 
-    }
-
-    &_prev {
-
-    }
+    &_prev {}
   }
 
   &__img-btn {
@@ -91,9 +78,7 @@
       transform: rotateZ(180deg);
     }
 
-    &_prev {
-
-    }
+    &_prev {}
   }
 
   &__item {

@@ -3,7 +3,6 @@ let windowHeight = document.documentElement.clientHeight;
 
 window.addEventListener('resize', () => {
   windowHeight = document.documentElement.clientHeight;
-  console.log('ddderferg');
 });
 
 export const initAcquainted = () => {
@@ -16,7 +15,6 @@ function setActualPosition() {
   ) {
     const offset =
       (_acquaintedFigures.getBoundingClientRect().top * 70) / windowHeight;
-    console.log(offset);
     _acquaintedFigures.style.transform = `translateY(${offset}px)`;
   }
 }
