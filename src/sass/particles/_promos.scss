@@ -26,6 +26,28 @@
   }
 }
 
+.promos-grid {
+  display: none;
+
+  &__container {
+    margin: 0 auto;
+  }
+
+  &__content {
+    margin: 32px -12px -20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__item {
+    width: 50%;
+    padding: 20px 12px;
+  }
+}
+
 .slider-promos {
   width: 100%;
 
@@ -186,5 +208,30 @@
     object-fit: contain;
     width: 35%;
     transform: translateX(12%) translateY(-0%);
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .promos {
+    display: none;
+  }
+
+  .promos-grid {
+    display: block;
+
+    &__content {
+
+    }
+
+    &__item {
+
+    }
+  }
+
+  .player {
+    width: 100%;
+    height: calc(9 / 16 * 50vw);
+    /* 16:9 Aspect Ratio */
+    border-radius: 28px;
   }
 }
