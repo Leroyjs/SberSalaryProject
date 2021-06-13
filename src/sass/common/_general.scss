@@ -68,6 +68,33 @@ input {
   }
 }
 
+.subtitle {
+  text-align: center;
+  font-family: $fontMain;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+
+  &_color {
+    &_white {
+      color: $white;
+    }
+
+    &_black {
+      color: $black;
+    }
+
+    &_green {
+      color: $green;
+    }
+
+    &_gray {
+      color: $gray;
+    }
+  }
+}
+
 .text {
   font-family: $fontMain;
   font-style: normal;

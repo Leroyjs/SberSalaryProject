@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/main.css">
+</head>
+<body>
+<header class="header">
+    <img src="media/main-logo.svg" alt="" class="header__logo_type_main-logo header__logo">
+    <img src="" alt="" id="partner-logo" class="header__logo_type_partner-logo header__logo">
+</header>
+
+<section class="acquainted acquainted_no-card container">
+    <h2 class="main-title acquainted__title main-title_color_black">
+        У Вас ещё <span class="acquainted__title main-title_color_green">нет золотой карты</span> Сбера
+    </h2>
+    <div class="acquainted__main-content">
+        <img src="media/card.png" alt="" class="acquainted__card">
+        <div class="acquainted__substrate-wrapper">
+            <img src="media/substrate.svg" alt="" class="acquainted__substrate">
+        </div>
+        <div class="acquainted__figures">
+            <img src="media/figures/ellipse.svg" alt=""
+                 class="acquainted__figure-img acquainted__figure-img_type_ellipse">
+            <img src="media/figures/line.svg" alt="" class="acquainted__figure-img acquainted__figure-img_type_line">
+            <img src="media/figures/semi-ellipse.svg" alt=""
+                 class="acquainted__figure-img acquainted__figure-img_type_semi-ellipse">
+            <img src="media/figures/star.svg" alt="" class="acquainted__figure-img acquainted__figure-img_type_star">
+        </div>
+    </div>
+    <div class="acquainted__instruction">
+        <h2 class="subtitle acquainted__subtitle main-title_color_black">
+            Для получения золотой карты Сбер
+        </h2>
+        <h3 class="desc acquainted__subtitle desc_color_gray">
+            Visa Gold, Master Card Gold или МИР Gold
+        </h3>
+    </div>
+
+    <div class="acquainted__action">
+        <h3 class="text acquainted__subtitle text_color_black">
+            Подайте заявление в бухгалтериювашей организации по адресупо адресу:
+            г. Курган, ул. Коли Мяготина 44
+        </h3>
+    </div>
+</section>
+<section class="form-section container">
+    <div class="ancor" id="form-section-ancor"></div>
+    <div class="form-section__inner">
+        <h2 class="title title_color_green form-section__title">
+            Если остались вопросы
+            напишите нам
+            и мы вам перезвоним
+        </h2>
+        <span class="form-section__hello desc desc_color_gray">Здравствуйте, сотрудник <span
+                id="form-main-input-hello-chenge" class="link form-section__hello-chenge">Контур</span></span>
+        <form class="form-section__form form-main" id="form-main">
+            <div class="form-main__input-wrapper">
+                <input type="text" class="form-main__input" placeholder="Введите ваше имя" id="form-main-input-name">
+                <div id="form-main-name-error" class="form-main__error">Текст ошибки</div>
+            </div>
+            <div class="form-main__input-wrapper">
+                <input type="text" class="form-main__input" placeholder="Введите ваш номер телефона"
+                       id="form-main-input-phone">
+                <div id="form-main-phone-error" class="form-main__error">Ошибка</div>
+            </div>
+            <button class="button button_green form-main__button">Оставить заявку на звонок</button>
+        </form>
+        <div class="form-section__personal-policy desc desc_color_gray">
+            Нажимая на&nbsp;кнопку &laquo;Отправить&raquo;, я&nbsp;соглашаюсь с&nbsp;условиями обработки <a href=""
+                                                                                                            class="link">персональных
+            данных</a>
+        </div>
+        <a href="" class="form-section__application-form">
+            <img src="media/pdf-icon.svg" alt="" class="form-section__application-form-icon">
+            <span class="link desc">Форма заявления</span>
+        </a>
+        <div class="form-section__cop desc desc_color_gray">
+            © 1997—2021 ПАО СберБанк
+            <br>
+            <br>
+            Россия, Москва, 117997, ул. Вавилова, 19. Генеральная лицензия
+            на осуществление банковских операций от 11 августа 2015 года.
+            Регистрационный номер — 1481.
+        </div>
+    </div>
+</section>
+
+<div id="modal-chenge-company" class="modal change-company container">
+    <h2 class="title title_color_white change-company__title">
+        Вы работаете в организации
+        <span id="change-company__company-name" class="change-company__company">Контур</span>?
+    </h2>
+    <div class="change-company__desc desc desc_color_white">
+        Если информация не верная, то введите название организации в которой вы работаете
+    </div>
+    <form id="change-company__form" class="change-company__form">
+        <input value="" type="text" class="change-company__input" placeholder="Введите название организации">
+        <button class="change-company__button button button_green">Подтвердить</button>
+    </form>
+    <button id="change-company-cancel" class="change-company__button-cancel button button_gray">Отмена</button>
+</div>
+</section>
+<script src="./assets/no-card.js"></script>
+</body>
+</html>
