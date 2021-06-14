@@ -223,6 +223,10 @@ input {
   font-weight: 600;
   cursor: pointer;
 
+  &_normal {
+    font-weight: normal;
+  }
+
   &::after {
     content: '';
     display: block;
@@ -250,7 +254,7 @@ input {
   }
 }
 
-@media screen and (min-width:600px) {
+@media screen and (min-width: 600px) {
   .button {
     max-width: 320px;
   }
@@ -273,7 +277,7 @@ input {
   }
 }
 
-@media screen and (min-width:1000px) {
+@media screen and (min-width: 1000px) {
   .container {
     padding-left: 20px;
     padding-right: 20px;

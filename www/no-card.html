@@ -12,7 +12,6 @@
     <img src="media/main-logo.svg" alt="" class="header__logo_type_main-logo header__logo">
     <img src="" alt="" id="partner-logo" class="header__logo_type_partner-logo header__logo">
 </header>
-
 <section class="acquainted acquainted_no-card container">
     <h2 class="main-title acquainted__title main-title_color_black">
         У Вас ещё <span class="acquainted__title main-title_color_green">нет золотой карты</span> Сбера
@@ -43,15 +42,15 @@
     <div class="acquainted__action">
         <h3 class="text acquainted__subtitle text_color_black">
             Подайте заявление в бухгалтериювашей организации по адресупо адресу:<br>
-            г. Курган, ул. Коли Мяготина 44
+            <a href="#" class="link link_normal text_color_black">г. Курган, ул. Коли Мяготина 44</a>
         </h3>
     </div>
 </section>
-<section class="form-section container">
+<section id="form-section" class="form-section container">
     <div class="ancor" id="form-section-ancor"></div>
     <div class="form-section__inner">
         <h2 class="title title_color_green form-section__title">
-            Если остались вопросы
+            Если остались вопросы <br>
             напишите нам
             и мы вам перезвоним
         </h2>
@@ -65,7 +64,12 @@
             <div class="form-main__input-wrapper">
                 <input type="text" class="form-main__input" placeholder="Введите ваш номер телефона"
                        id="form-main-input-phone">
-                <div id="form-main-phone-error" class="form-main__error">Ошибка</div>
+                <div id="form-main-phone-error" class="form-main__error">Текст ошибки</div>
+            </div>
+            <div class="form-main__input-wrapper form-main__input-wrapper__no-company">
+                <input type="text" class="form-main__input" placeholder="Введите название организации"
+                       id="form-main-input-company">
+                <div id="form-main-company-error" class="form-main__error">Текст ошибки</div>
             </div>
             <button class="button button_green form-main__button">Оставить заявку на звонок</button>
         </form>
@@ -88,7 +92,6 @@
         </div>
     </div>
 </section>
-
 <div id="modal-chenge-company" class="modal change-company container">
     <h2 class="title title_color_white change-company__title">
         Вы работаете в организации

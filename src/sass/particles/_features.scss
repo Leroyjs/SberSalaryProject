@@ -116,12 +116,13 @@
     border-radius: 50%;
     min-width: 32px;
     height: 32px;
-    margin: 0 24px;
 
     &_next {
+      margin-right: 24px;
     }
 
     &_prev {
+      margin-left: 24px;
     }
   }
 
