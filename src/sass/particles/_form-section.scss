@@ -17,6 +17,10 @@
     padding: 32px 6px;
     padding-bottom: 58px;
     border-radius: 28px;
+
+    &_no-button {
+      padding-bottom: 0;
+    }
   }
 
   &__hello {

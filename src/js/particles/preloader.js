@@ -16,7 +16,7 @@ export const initPreloader = () => {
     _body.classList.add('loaded');
     _body.classList.remove('no-scroll');
     // clearInterval(preloaderInterval);
-  }, 55000);
+  }, 1000);
 };
 
 // function setCard(el, number) {

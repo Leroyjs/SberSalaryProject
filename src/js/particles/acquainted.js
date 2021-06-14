@@ -6,6 +6,7 @@ window.addEventListener('resize', () => {
 });
 
 export const initAcquainted = () => {
+  setActualPosition();
   window.addEventListener('scroll', setActualPosition);
 };
 

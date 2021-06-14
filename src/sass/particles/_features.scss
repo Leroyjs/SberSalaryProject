@@ -16,13 +16,17 @@
   display: none;
   position: relative;
 
+  &_show {
+    display: flex;
+  }
+
   &_bg {
     background: #FBFBFB;
     border-radius: 32px;
   }
 
   &__inner {
-    padding: 40px;
+    padding: 0px;
   }
 
   &__container {
@@ -40,7 +44,7 @@
 
   &__item {
     width: 100%;
-    padding: 20px 42px;
+    padding: 22px 0px;
   }
 
   &__action {
@@ -63,8 +67,10 @@
     padding: 26px 26px 0px;
   }
 
-  &__slider {
+  &__slider {}
 
+  &__description {
+    max-width: 296px;
   }
 
   &__controls {
@@ -133,8 +139,7 @@
       transform: rotateZ(180deg);
     }
 
-    &_prev {
-    }
+    &_prev {}
   }
 
   &__item {
@@ -468,20 +473,23 @@
   .features-grid {
     display: block;
 
-    &__title {
-
-    }
+    &__title {}
 
     &__content {
       display: flex;
     }
 
-    &__action {
-      margin-top: 52px;
+    &__inner {
+      padding: 40px;
     }
 
     &__item {
+      width: 100%;
+      padding: 20px 42px;
+    }
 
+    &__action {
+      margin-top: 52px;
     }
   }
 }
@@ -490,9 +498,7 @@
   .features-grid {
     display: block;
 
-    &__title {
-
-    }
+    &__title {}
 
     &__content {
       display: flex;
@@ -517,13 +523,9 @@
   .features-grid {
     display: block;
 
-    &__title {
+    &__title {}
 
-    }
-
-    &__content {
-
-    }
+    &__content {}
 
     &__action {
       margin-top: 52px;
