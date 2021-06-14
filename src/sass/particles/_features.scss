@@ -14,13 +14,19 @@
 
 .features-grid {
   display: none;
+  position: relative;
 
-  &__container {
-    position: relative;
-    margin: 0 auto;
+  &_bg {
     background: #FBFBFB;
     border-radius: 32px;
+  }
+
+  &__inner {
     padding: 40px;
+  }
+
+  &__container {
+    margin: 52px auto;
   }
 
   &__content {
@@ -251,8 +257,8 @@
 
   &_f1 {
     background: #C1B2FF;
-    width: 70px;
-    height: 70px;
+    width: 122px;
+    height: 122px;
 
     left: 0px;
     top: 0px;
@@ -262,8 +268,8 @@
 
   &_f2 {
     background: #0099F9;
-    width: 16px;
-    height: 16px;
+    width: 32px;
+    height: 32px;
 
     left: 230px;
     top: 0px;
@@ -297,6 +303,51 @@
 
     right: 30px;
     top: 40%;
+  }
+
+  &_f1-yes {
+    background: #C1B2FF;
+    width: 90px;
+    height: 90px;
+
+    right: 20px;
+    top: 51%;
+  }
+
+  &_f2-yes {
+    background: #0099F9;
+    width: 32px;
+    height: 32px;
+
+    right: 130px;
+    top: 72%;
+  }
+
+  &_f3-yes {
+    background: #9BFFE1;
+    width: 50px;
+    height: 50px;
+
+    right: 32px;
+    top: 42%;
+  }
+
+  &_f4-yes {
+    background: #9BFFE1;
+    width: 50px;
+    height: 50px;
+
+    left: 42px;
+    top: 30%;
+  }
+
+  &_f5-yes {
+    background: #0099F9;
+    width: 32px;
+    height: 32px;
+
+    top: 92px;
+    left: 122px;
   }
 }
 
@@ -371,6 +422,11 @@
 
     &__item {
       width: 33.33%;
+
+      &_half {
+        padding: 20px 64px;
+        width: 50%;
+      }
     }
   }
 }

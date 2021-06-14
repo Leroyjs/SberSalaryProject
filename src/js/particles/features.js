@@ -92,7 +92,7 @@ export const initFeatureParallax = () => {
 };
 
 function setFeatureParallaxPosition() {
-    const speedArray = [73, 54, 83, 61, 65, 70];
+    const speedArray = [93, 54, 83, 61, 75, 70];
     _featuresFigures.forEach((featuresFigure, i) => {
         if (
             Math.abs(featuresFigure.getBoundingClientRect().top) <= windowHeight
