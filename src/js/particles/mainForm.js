@@ -14,6 +14,13 @@ export const initMainForm = () => {
   const _modalChengeCompanyCancelButton = document.getElementById(
     'change-company-cancel'
   );
+  const _modalDone = document.getElementById('modal-done');
+  const _modalDoneCancel = document.getElementById('done-cancel');
+  const _modalDoneClose = document.getElementById('done-close');
+
+  const _modalError = document.getElementById('modal-error');
+  const _modalErrorCancel = document.getElementById('error-cancel');
+  const _modalErrorClose = document.getElementById('error-close');
   const errors = {
     phone: '',
     name: ''
@@ -45,8 +52,30 @@ export const initMainForm = () => {
     e.preventDefault();
     checkErrors();
     setErrorsState();
-    mailTo();
+    if (!errors.phone && !errors.name) {
+      mailTo(_nameInput, _phoneInput);
+    }
   });
+  (function initDoneModal() {
+    _modalDoneCancel.addEventListener('click', () => {
+      _modalDone.classList.remove('modal_active');
+      document.body.classList.remove('no-scroll');
+    });
+    _modalDoneClose.addEventListener('click', () => {
+      _modalDone.classList.remove('modal_active');
+      document.body.classList.remove('no-scroll');
+    });
+  })();
+  (function initErrorModal() {
+    _modalErrorCancel.addEventListener('click', () => {
+      _modalError.classList.remove('modal_active');
+      document.body.classList.remove('no-scroll');
+    });
+    _modalErrorClose.addEventListener('click', () => {
+      _modalError.classList.remove('modal_active');
+      document.body.classList.remove('no-scroll');
+    });
+  })();
 
   function setErrorsState() {
     if (errors.phone) {
@@ -83,6 +112,31 @@ export const initMainForm = () => {
     }
     return error;
   }
+
+  function mailTo(_nameInput, _phoneInput) {
+    let body = `name=${_nameInput.value}&phone=${_phoneInput.value}`;
+    const url = '/mail.php';
+    body = body.replace(/\s/g, '');
+    console.log(body);
+    fetch(url, {
+      method: 'POST',
+      body: body,
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+        'Access-Control-Request-Headers': 'X-Requested-With, Origin'
+      }
+    })
+      .then(data => {
+        _modalDone.classList.add('modal_active');
+        document.body.classList.add('no-scroll');
+      })
+      .catch(error => {
+        console.log('erroeeeerr');
+        _modalError.classList.add('modal_active');
+        document.body.classList.add('no-scroll');
+        console.log(error);
+      });
+  }
 };
 
 function mask() {
@@ -112,21 +166,4 @@ function setCursorPosition(pos, elem) {
     range.moveStart('character', pos);
     range.select();
   }
-}
-
-function mailTo() {
-  let body = `name=${_nameInput.value}&phone=${_phoneInput.value}`;
-  const url = '/mail.php';
-  body = body.replace(/\s/g, '');
-  console.log(body);
-  fetch(url, {
-    method: 'POST',
-    body: body,
-    headers: {
-      'Content-Type': 'application/x-www-form-urlencoded',
-      'Access-Control-Request-Headers': 'X-Requested-With, Origin'
-    }
-  }).then(data => {
-    console.log(data);
-  });
 }

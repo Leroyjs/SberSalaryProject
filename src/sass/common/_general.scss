@@ -23,6 +23,46 @@ input {
   top: -60px;
 }
 
+.cancel {
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $white;
+  transform: rotate(45deg);
+
+  &__inner {
+    width: 18px;
+    height: 1px;
+    background-color: $white;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 18px;
+      height: 1px;
+      background-color: $white;
+      transform: rotate(90deg);
+    }
+  }
+
+  &:hover {
+    background: $white;
+
+    .cancel__inner {
+      background-color: $black;
+
+      &::after {
+        background-color: $black;
+      }
+    }
+  }
+}
+
 .main-title {
   text-align: center;
   font-family: $fontMain;
@@ -298,11 +338,18 @@ input {
   section {
     margin-bottom: 80px;
   }
-}
 
-// @media screen and (min-width:1400px) {
-//   .container {
-//     padding-left: 40px;
-//     padding-right: 40px;
-//   }
-// }
+  .cancel {
+    width: 46px;
+    height: 46px;
+
+    &__inner {
+      width: 26px;
+      height: 1px;
+
+      &::after {
+        width: 26px;
+      }
+    }
+  }
+}
