@@ -10,6 +10,7 @@ import {initPromoSlider} from '~/js/particles/promos';
 import {initVideoPlayers} from '~/js/particles/promos';
 import '~/js/particles/features';
 import '~/js/particles/promos';
+import {initSliderFiguresParallax} from "@/particles/steps";
 
 window.onbeforeunload = function () {
     window.scrollTo(0, 0);
@@ -23,6 +24,7 @@ window.addEventListener('DOMContentLoaded', () => {
     chengeCompany(getActiveCompanyByGetParameter(), true);
     initFeatureSlider();
     initFeatureParallax();
+    // initSliderFiguresParallax();
     initPromoSlider();
     initVideoPlayers();
 });
