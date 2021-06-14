@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Зарплатный проект</title>
+    <link rel="shortcut icon" href="media/favicon.ico" type="image/x-icon">
 
     <meta name="description" content="А у вас уже есть Золотая карта от СберБанка?"> <!-- ˜150 chars -->
     <meta property="og:title" content="Переходи на Сбер!">
@@ -16,6 +17,12 @@
     <meta property="og:image" content="./media/opengraph.jpg"> <!-- 200x200px - 1200x1200px -->
 
     <link rel="stylesheet" href="./assets/main.css">
+    <script>
+        window.pageLoaded = false;
+        window.addEventListener('load', function () {
+            window.pageLoaded = true;
+        })
+    </script>
 </head>
 <body class="no-scroll">
 <div id="preloader" class="preloader">
@@ -27,28 +34,7 @@
         Золотая карта от Сбера?
     </h2>
     <div class="preloader__phone-wrapper">
-        <span class="preloader__card-title">Visa Gold зарплатная</span>
         <img src="media/preloader-img.png" alt="" class="preloader__img">
-        <div class="preloader__phone-bg"></div>
-        <div class="preloader__cards-wrapper">
-            <div class="preloader__cards-inner preloader__cards-inner_card_1">
-                <div class="preloader__card-wrapper">
-                    <img src="media/cards/1.png" alt="" class="preloader__card preloader__card_type_1">
-                </div>
-                <!-- <div class="preloader__card-wrapper">
-                    <span class="preloader__card-title">Visa Gold зарплатная</span>
-                    <img src="media/cards/2.png" alt="" class="preloader__card preloader__card_type_2">
-                </div>
-                <div class="preloader__card-wrapper">
-                    <span class="preloader__card-title">Visa Gold зарплатная</span>
-                    <img src="media/cards/3.png" alt="" class="preloader__card preloader__card_type_3">
-                </div>
-                <div class="preloader__card-wrapper">
-                    <span class="preloader__card-title">Visa Gold зарплатная</span>
-                    <img src="media/cards/1.png" alt="" class="preloader__card preloader__card_type_1">
-                </div> -->
-            </div>
-        </div>
     </div>
     <div class="preloader__figures">
         <img src="media/figures/ellipse.svg" alt="" class="preloader__figure-img preloader__figure-img_type_ellipse">
@@ -59,7 +45,9 @@
     </div>
 </div>
 <header class="header">
-    <img src="media/main-logo.svg" alt="" class="header__logo_type_main-logo header__logo">
+    <a href="/" class="">
+        <img src="media/main-logo.svg" alt="" class="header__logo_type_main-logo header__logo">
+    </a>
     <img src="" alt="" id="partner-logo" class="header__logo_type_partner-logo header__logo">
 </header>
 <div class="main-button__wrapper">
@@ -521,18 +509,44 @@
     </div>
 </section>
 <div id="modal-chenge-company" class="modal change-company container">
-    <h2 class="title title_color_white change-company__title">
-        Вы работаете в организации
-        <span id="change-company__company-name" class="change-company__company">Контур</span>?
-    </h2>
-    <div class="change-company__desc desc desc_color_white">
-        Если информация не верная, то введите название организации в которой вы работаете
+    <div class="change-company__inner">
+        <h2 class="title title_color_white change-company__title">
+            Вы работаете в организации
+            <span id="change-company__company-name" class="change-company__company">Контур</span>?
+        </h2>
+        <div class="change-company__desc desc desc_color_white">
+            Если информация не верная, то введите название организации в которой вы работаете
+        </div>
+        <form id="change-company__form" class="change-company__form">
+            <input value="" type="text" class="change-company__input" placeholder="Введите название организации">
+            <button class="change-company__button button button_green">Подтвердить</button>
+        </form>
     </div>
-    <form id="change-company__form" class="change-company__form">
-        <input value="" type="text" class="change-company__input" placeholder="Введите название организации">
-        <button class="change-company__button button button_green">Подтвердить</button>
-    </form>
-    <button id="change-company-cancel" class="change-company__button-cancel button button_gray">Отмена</button>
+    <button id="change-company-cancel" class="change-company__button-cancel cancel">
+        <div class="cancel__inner"></div>
+    </button>
+</div>
+<div id="modal-done" class="modal change-company container">
+    <div class="change-company__inner">
+        <h2 class="title title_color_white change-company__title">
+            Спасибо за оформление заявки!
+        </h2>
+        <button id="done-close" class="change-company__button button button_green">Хорошо</button>
+    </div>
+    <button id="done-cancel" class="change-company__button-cancel cancel">
+        <div class="cancel__inner"></div>
+    </button>
+</div>
+<div id="modal-error" class="modal change-company container">
+    <div class="change-company__inner">
+        <h2 class="title title_color_white change-company__title">
+            Что-то пошло не так!
+        </h2>
+        <button id="error-close" class="change-company__button button button_green">Хорошо</button>
+    </div>
+    <button id="error-cancel" class="change-company__button-cancel cancel">
+        <div class="cancel__inner"></div>
+    </button>
 </div>
 </section>
 <script src="./assets/main.js"></script>
