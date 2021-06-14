@@ -12,10 +12,103 @@ $preloaderDoneAnimationDuration:.5s;
   z-index: 1000;
   background-color: $mainBackground;
 
+  &__img {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__phone-wrapper {
+    transform: translateY(50px);
+  }
+
+  &__phone-bg {
+    background-color: $white;
+    width: 83.333333%;
+    height: 90.593103448275%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    border-top-left-radius: 12%;
+    border-top-right-radius: 12%;
+  }
+
   &__figures {
     position: absolute;
     bottom: 0;
     width: 100%;
+    z-index: 1;
+  }
+
+  &__phone-wrapper {
+    position: relative;
+  }
+
+  &__cards-inner {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    position: relative;
+
+    &_card {
+      &_1 {
+        transform: translateX(0);
+        transition: transform 0s;
+      }
+
+      &_2 {
+        transform: translateX(-100%);
+        transition: transform 1s;
+      }
+
+      &_3 {
+        transform: translateX(-200%);
+        transition: transform 1s;
+      }
+
+      &_4 {
+        transform: translateX(-300%);
+        transition: transform 1s;
+      }
+    }
+  }
+
+  &__cards-wrapper {
+    position: absolute;
+    left: 50%;
+    overflow: hidden;
+    width: 82.6%;
+    height: 40%;
+    top: 35%;
+    transform: translate(-50%);
+    // padding-top: 40px;
+  }
+
+  &__card-title {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 25%;
+    z-index: 1;
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 140%;
+
+    color: #000000;
+  }
+
+  &__card {
+    height: 100%;
+  }
+
+  &__card-wrapper {
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 
   &__title {
@@ -53,6 +146,12 @@ $preloaderDoneAnimationDuration:.5s;
         }
       }
     }
+  }
+
+  &__figures {
+    //   animation-name: figuresAnimation;
+    //  animation-iteration-count: infinite;
+    //  animation-duration: 4s;
   }
 
   &__figure-img {
@@ -102,6 +201,48 @@ $preloaderDoneAnimationDuration:.5s;
     }
   }
 }
+
+// @keyframes figuresAnimation {
+//   0% {
+//     transform: scale(1);
+//   }
+
+//   6% {
+//     transform: scale(1.004);
+//   }
+
+//   12% {
+//     transform: scale(1);
+//   }
+
+//   33% {
+//     transform: scale(1);
+//   }
+
+//   39% {
+//     transform: scale(1.004);
+//   }
+
+//   45% {
+//     transform: scale(1);
+//   }
+
+//   66% {
+//     transform: scale(1);
+//   }
+
+//   72% {
+//     transform: scale(1.004);
+//   }
+
+//   78% {
+//     transform: scale(1);
+//   }
+
+//   100% {
+//     transform: scale(1);
+//   }
+// }
 
 @keyframes dot-1 {
   0% {
