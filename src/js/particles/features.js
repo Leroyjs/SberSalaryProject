@@ -8,7 +8,6 @@ export const initFeatureSlider = () => {
     const _pageDots = document.querySelector('.page-dots');
 
     const imgs = [];
-    // const imgs = _sliderFeatures.querySelectorAll('.figures');
     const _figuresAll = _sliderFeatures.querySelectorAll('.figures');
     _figuresAll.forEach(figuresSlide => {
         const slideFigures = figuresSlide.querySelectorAll('.slide-figure');
@@ -29,20 +28,15 @@ export const initFeatureSlider = () => {
         wrapAround: false,
         pageDots: false,
         on: {
-            scroll: function (progress) {
+            scroll: function () {
                 const carousel = this;
-                const carouselWidth = carousel.size.width;
 
                 carousel.slides.forEach(function (slide, i) {
                     const slideFigures = imgs[i];
-                    const x = (((slide.target + carousel.x) % carouselWidth) * -1) / 6;
+                    const x = (slide.target + carousel.x) * (-1 / 6);
 
-                    slideFigures.forEach(figure => {
-                        if (
-                            figure.offsetLeft + x < carouselWidth &&
-                            figure.offsetLeft + x > carouselWidth * 0.14
-                        )
-                            figure.style[transformProp] = 'translateX(' + x + 'px)';
+                    slideFigures.forEach((figure) => {
+                        figure.style[transformProp] = 'translateX(' + x + 'px)';
                     });
                 });
             },
