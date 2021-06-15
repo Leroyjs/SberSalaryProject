@@ -14,6 +14,6 @@ window.addEventListener('DOMContentLoaded', () => {
     initMainForm();
     initAcquainted();
     initFeatureParallax();
-    // initSliderFiguresParallax();
+    initSliderFiguresParallax();
     chengeCompany(getActiveCompanyByGetParameter(), true);
 });

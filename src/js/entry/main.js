@@ -24,7 +24,7 @@ window.addEventListener('DOMContentLoaded', () => {
     chengeCompany(getActiveCompanyByGetParameter(), true);
     initFeatureSlider();
     initFeatureParallax();
-    // initSliderFiguresParallax();
+    initSliderFiguresParallax();
     initPromoSlider();
     initVideoPlayers();
 });
