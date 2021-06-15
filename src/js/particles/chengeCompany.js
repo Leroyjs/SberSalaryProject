@@ -14,16 +14,30 @@ export const chengeCompany = (company, isSlug = false) => {
     chengeLogo(companyObj.logo);
     chengeFormCompany(companyObj.title);
     setModalValue(companyObj.title);
+    setAncors(companyObj.slug);
+    setMainImg(companyObj.img);
     window.activeCompany = companyObj.title;
   } else {
     chengeLogo(false);
     chengeFormCompany(company);
     setModalValue(company);
+    setMainImg('sber.jpg');
     window.activeCompany = company;
   }
 
   window.activeCompany = company;
 };
+function setMainImg(company) {
+  const _mainImg = document.getElementById('main-img');
+  _mainImg && _mainImg.setAttribute('src', `media/partners/photo/${company}`);
+}
+function setAncors(company) {
+  const _noCard = document.getElementById('no-card');
+  const _haveCard = document.getElementById('have-card');
+  _noCard && _noCard.setAttribute('href', `/no-card.html?company=${company}`);
+  _haveCard &&
+    _haveCard.setAttribute('href', `/have-card.html?company=${company}`);
+}
 function setModalValue(initValue) {
   const _changeCompanyInput = document
     .getElementById('change-company__form')
@@ -66,6 +80,6 @@ const companies = [
     slug: 'kontur',
     title: 'Контур',
     logo: 'kontur',
-    img: 'kontur'
+    img: 'kontur.jpg'
   }
 ];

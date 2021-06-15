@@ -61,7 +61,7 @@
 </section>
 <section id="form-section" class="form-section container">
     <div class="ancor" id="form-section-ancor"></div>
-    <div class="form-section__inner form-section__inner_no-button">
+    <div class="form-section__inner">
         <h2 class="title title_color_green form-section__title">
             Если остались вопросы <br>
             напишите нам
@@ -106,20 +106,45 @@
     </div>
 </section>
 <div id="modal-chenge-company" class="modal change-company container">
-    <h2 class="title title_color_white change-company__title">
-        Вы работаете в организации
-        <span id="change-company__company-name" class="change-company__company">Контур</span>?
-    </h2>
-    <div class="change-company__desc desc desc_color_white">
-        Если информация не верная, то введите название организации в которой вы работаете
+    <div class="change-company__inner">
+        <h2 class="title title_color_white change-company__title">
+            Вы работаете в организации
+            <span id="change-company__company-name" class="change-company__company">Контур</span>?
+        </h2>
+        <div class="change-company__desc desc desc_color_white">
+            Если информация не верная, то введите название организации в которой вы работаете
+        </div>
+        <form id="change-company__form" class="change-company__form">
+            <input value="" type="text" class="change-company__input" placeholder="Введите название организации">
+            <button class="change-company__button button button_green">Подтвердить</button>
+        </form>
     </div>
-    <form id="change-company__form" class="change-company__form">
-        <input value="" type="text" class="change-company__input" placeholder="Введите название организации">
-        <button class="change-company__button button button_green">Подтвердить</button>
-    </form>
-    <button id="change-company-cancel" class="change-company__button-cancel button button_gray">Отмена</button>
+    <button id="change-company-cancel" class="change-company__button-cancel cancel">
+        <div class="cancel__inner"></div>
+    </button>
 </div>
-</section>
+<div id="modal-done" class="modal change-company container">
+    <div class="change-company__inner">
+        <h2 class="title title_color_white change-company__title">
+            Спасибо за оформление заявки!
+        </h2>
+        <button id="done-close" class="change-company__button button button_green">Хорошо</button>
+    </div>
+    <button id="done-cancel" class="change-company__button-cancel cancel">
+        <div class="cancel__inner"></div>
+    </button>
+</div>
+<div id="modal-error" class="modal change-company container">
+    <div class="change-company__inner">
+        <h2 class="title title_color_white change-company__title">
+            Что-то пошло не так!
+        </h2>
+        <button id="error-close" class="change-company__button button button_green">Хорошо</button>
+    </div>
+    <button id="error-cancel" class="change-company__button-cancel cancel">
+        <div class="cancel__inner"></div>
+    </button>
+</div>
 <script src="./assets/no-card.js"></script>
 </body>
 </html>
