@@ -128,7 +128,7 @@ export const initMainForm = () => {
   }
 
   function mailTo(_nameInput, _phoneInput) {
-    let body = `name=${_nameInput.value}&phone=${_phoneInput.value}`;
+    let body = `name=${_nameInput.value}&phone=${_phoneInput.value}&company=${window.activeCompany}`;
     const url = '/mail.php';
     body = body.replace(/\s/g, '');
     console.log(body);
