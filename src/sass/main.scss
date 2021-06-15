@@ -11,12 +11,24 @@
 @import './particles/form-section';
 
 .main-button {
+  transition: opacity .2s, visibility .2s .0s, transform .2s;
+  visibility: visible;
+  opacity: 1;
+
   &__wrapper {
     position: fixed;
     bottom: 12px;
     z-index: 100;
     padding: 0 12px;
     width: 100%;
+
+  }
+
+  &_hidden {
+    transition: opacity .2s, visibility .2s .2s, transform .2s;
+    transform: translateY(10px);
+    opacity: 0;
+    visibility: hidden;
   }
 }
 
@@ -39,9 +51,9 @@
 }
 
 // @media screen and (min-width:1400px) {
-  //   .main-button {
-  //     &__wrapper {
-  //       bottom: 60px;
-  //     }
-  //   }
-  // }
+//   .main-button {
+//     &__wrapper {
+//       bottom: 60px;
+//     }
+//   }
+// }

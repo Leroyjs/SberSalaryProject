@@ -25,7 +25,21 @@ export const initMainForm = () => {
     phone: '',
     name: ''
   };
+  let windowHeight = document.documentElement.clientHeight;
+  const _mainButton = document.querySelector('.main-button');
 
+  if (_mainButton) {
+    const _formSectionInner = document.querySelector('.form-section__inner');
+    window.addEventListener('scroll', () => {
+      const position =
+        _formSectionInner.getBoundingClientRect().top - windowHeight;
+      if (position < 0) {
+        _mainButton.classList.add('main-button_hidden');
+      } else {
+        _mainButton.classList.remove('main-button_hidden');
+      }
+    });
+  }
   _phoneInput.addEventListener('input', mask, false);
 
   _changeCompanyForm.addEventListener('submit', e => {
