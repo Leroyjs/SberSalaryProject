@@ -27,6 +27,7 @@ export const initFeatureSlider = () => {
     prevNextButtons: false,
     wrapAround: false,
     pageDots: false,
+    autoPlay: 3000,
     on: {
       scroll: function () {
         const carousel = this;
