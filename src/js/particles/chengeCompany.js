@@ -28,8 +28,10 @@ export const chengeCompany = (company, isSlug = false) => {
   window.activeCompany = company;
 };
 function setMainImg(company) {
-  const _mainImg = document.getElementById('main-img');
-  _mainImg && _mainImg.setAttribute('src', `media/partners/photo/${company}`);
+  const _mainImg = document.querySelector('.first-slide__img-wrapper');
+  if (_mainImg) {
+    _mainImg.style.backgroundImage = `url('media/partners/photo/${company}')`;
+  }
 }
 function setAncors(company) {
   const _noCard = document.getElementById('no-card');
