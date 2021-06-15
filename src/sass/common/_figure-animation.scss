@@ -1,14 +1,14 @@
 @keyframes star-animation {
   0% {
-    transform: rotateX(-20deg) rotateY(15deg);
+    transform: rotateX(-20deg) rotateY(15deg) translateZ(20px);
   }
 
   50% {
-    transform: rotateX(-20deg) rotateY(0deg);
+    transform: rotateX(-20deg) rotateY(0deg) translateZ(20px);
   }
 
   100% {
-    transform: rotateX(20deg) rotateY(-30deg) translateX(5px) translateY(5px);
+    transform: rotateX(20deg) rotateY(-30deg) translateX(5px) translateY(5px) translateZ(20px);
   }
 }
 
@@ -38,10 +38,10 @@
 
 @keyframes semi-ellipse-animation {
   0% {
-    transform: rotateX(-20deg) rotateY(15deg);
+    transform: rotateX(-20deg) rotateY(15deg) translateZ(20px);
   }
 
   100% {
-    transform: rotateX(0deg) rotateY(-10deg) rotateZ(10deg) translateX(-5px) translateY(-10px);
+    transform: rotateX(0deg) rotateY(-10deg) rotateZ(10deg) translateX(-5px) translateY(-10px) translateZ(20px);
   }
 }

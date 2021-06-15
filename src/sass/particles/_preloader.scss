@@ -2,6 +2,7 @@ $preloaderDoneAnimationDuration:.5s;
 
 .preloader {
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   width: 100vw;
   position: fixed;
   display: flex;
@@ -10,6 +11,7 @@ $preloaderDoneAnimationDuration:.5s;
   align-items: center;
   perspective: 1000;
   z-index: 1000;
+  transition: height .1s;
   background-color: $mainBackground;
 
   &__img {
@@ -17,18 +19,8 @@ $preloaderDoneAnimationDuration:.5s;
     z-index: 1;
     width: 81.25%;
     max-width: 415px;
-  }
-
-  &__phone-bg {
-    background-color: $white;
-    width: 83.333333%;
-    height: 90.593103448275%;
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
-    border-top-left-radius: 12%;
-    border-top-right-radius: 12%;
+    height: 66.5625vw;
+    max-height: 340px;
   }
 
   &__figures {
@@ -74,6 +66,10 @@ $preloaderDoneAnimationDuration:.5s;
   }
 
   &__title {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     font-style: normal;
     font-weight: 600;

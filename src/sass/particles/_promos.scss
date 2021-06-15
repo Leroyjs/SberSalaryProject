@@ -83,22 +83,21 @@
     cursor: pointer;
     margin: 0 24px;
 
-    &_next {
-    }
+    &_next {}
 
-    &_prev {
-    }
+    &_prev {}
   }
 
   &__img-btn {
-    object-fit: contain;
+    min-width: 14px;
+    min-height: 16px;
+    position: relative;
 
     &_next {
       transform: rotateZ(180deg);
     }
 
-    &_prev {
-    }
+    &_prev {}
   }
 
   &__item {
@@ -220,13 +219,9 @@
   .promos-grid {
     display: block;
 
-    &__content {
+    &__content {}
 
-    }
-
-    &__item {
-
-    }
+    &__item {}
   }
 
   .player {

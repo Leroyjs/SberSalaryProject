@@ -67,7 +67,6 @@
     padding: 26px 26px 0px;
   }
 
-  &__slider {}
 
   &__description {
     max-width: 296px;
@@ -134,7 +133,9 @@
   }
 
   &__img-btn {
-    object-fit: contain;
+    min-width: 14px;
+    min-height: 16px;
+    position: relative;
 
     &_next {
       transform: rotateZ(180deg);

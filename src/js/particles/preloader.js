@@ -1,3 +1,4 @@
+let preloaderIsDone = false;
 export const initPreloader = () => {
   let timeIsDone = false;
   setTimeout(() => {
@@ -10,9 +11,15 @@ export const initPreloader = () => {
       });
     }
   }, 1000);
+  setTimeout(() => {
+    if (!preloaderIsDone) {
+      preloaderInit();
+    }
+  }, 5000);
 };
 
 function preloaderInit() {
+  preloaderIsDone = true;
   const _body = document.body;
   _body.classList.add('loaded');
   _body.classList.remove('no-scroll');
