@@ -12,7 +12,8 @@ export const initAcquainted = () => {
 
 function setActualPosition() {
   if (
-    Math.abs(_acquaintedFigures.getBoundingClientRect().top) <= windowHeight
+    Math.abs(_acquaintedFigures.getBoundingClientRect().top) <=
+    windowHeight * 1.3
   ) {
     const offset =
       (_acquaintedFigures.getBoundingClientRect().top * 30) / windowHeight;

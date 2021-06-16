@@ -89,7 +89,10 @@ export const initFeatureParallax = () => {
 function setFeatureParallaxPosition() {
   const speedArray = [33, 24, 33, 11, 25, 10];
   _featuresFigures.forEach((featuresFigure, i) => {
-    if (Math.abs(featuresFigure.getBoundingClientRect().top) <= windowHeight) {
+    if (
+      Math.abs(featuresFigure.getBoundingClientRect().top) <=
+      windowHeight * 1.3
+    ) {
       const offset =
         (featuresFigure.getBoundingClientRect().top * speedArray[i]) /
         windowHeight;

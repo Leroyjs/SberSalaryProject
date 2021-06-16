@@ -36,6 +36,8 @@ function setMainImg(company) {
 function setAncors(company) {
   const _noCard = document.getElementById('no-card');
   const _haveCard = document.getElementById('have-card');
+  const _logo = document.querySelector('.logo-a');
+  _logo && _logo.setAttribute('href', `/?company=${company}`);
   _noCard && _noCard.setAttribute('href', `/no-card.html?company=${company}`);
   _haveCard &&
     _haveCard.setAttribute('href', `/have-card.html?company=${company}`);
