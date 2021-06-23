@@ -10,8 +10,7 @@ export const initVideoPlayers = () => {
   });
 
   function initVideo(item) {
-    // const videoId = item.getAttribute('data-video-id');
-    const videoId = 'H8trAJwJVGQ';
+    const videoId = item.getAttribute('data-video-id');
     const playerCover = item.firstChild.nextElementSibling;
     playerCover.style.backgroundImage = `url('https://img.youtube.com/vi/${videoId}/maxresdefault.jpg')`;
 
