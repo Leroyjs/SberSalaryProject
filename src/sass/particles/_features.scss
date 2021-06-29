@@ -141,7 +141,8 @@
       transform: rotateZ(180deg);
     }
 
-    &_prev {}
+    &_prev {
+    }
   }
 
   &__item {
@@ -478,7 +479,8 @@
   .features-grid {
     display: block;
 
-    &__title {}
+    &__title {
+    }
 
     &__content {
       display: flex;
@@ -503,13 +505,14 @@
   .features-grid {
     display: block;
 
-    &__title {}
+    &__title {
+    }
 
     &__content {
       display: flex;
       flex-wrap: wrap;
       flex-direction: row;
-      align-items: center;
+      align-items: flex-start;
       justify-content: center;
       max-width: 980px;
     }
@@ -528,9 +531,11 @@
   .features-grid {
     display: block;
 
-    &__title {}
+    &__title {
+    }
 
-    &__content {}
+    &__content {
+    }
 
     &__action {
       margin-top: 52px;
