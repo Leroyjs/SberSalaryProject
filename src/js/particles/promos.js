@@ -30,7 +30,7 @@ export const initVideoPlayers = () => {
                 let tag = document.createElement('script');
                 tag.src = 'https://www.youtube.com/iframe_api';
                 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-                createNewPlayer();
+                // createNewPlayer();
             } else {
                 createNewPlayer();
             }
@@ -64,17 +64,19 @@ export const initPromoSlider = () => {
         '.slider-promos__button_next'
     );
     const _pageDots = _sliderControls.querySelector('.page-dots');
-    const mql_720 = window.matchMedia("screen and (min-width: 720px)");
+    const mql_720 = window.matchMedia("screen and (min-width: 830px)");
 
     function initFlickity(slider) {
         const dotsArray = [];
         let activeDot = null;
         const sliderOptions = {
-            cellAlign: 'center',
+            cellAlign: 'left',
             percentPosition: false,
             prevNextButtons: false,
             wrapAround: false,
             pageDots: false,
+            groupCells: false,
+            // draggable: false,
             on: {
                 change: function (index) {
                     activeDot && activeDot.classList.remove('page-dots__dot_active');
@@ -114,18 +116,32 @@ export const initPromoSlider = () => {
         return slider;
     }
 
-    let flickity;
+    let flickity = null;
     if (!mql_720.matches) {
         flickity = initFlickity(_sliderPromos);
+        console.log("initFlickity first")
     }
 
     // replaceChild
     mql_720.addEventListener('change', (e) => {
         if (e.matches) {
             // flickity && flickity.destroy();
+            // if (!flickity) {
+            //     flickity = initFlickity(_sliderPromos);
+            //     console.log("initFlickity matches")
+            // }
+            // setTimeout(()=>{
+            //     flickity.resize();
+            // },1000)
+            flickity.select(0);
+
         } else {
-            if (!flickity)
+            if (!flickity) {
                 flickity = initFlickity(_sliderPromos);
+                console.log("initFlickity else")
+            }
+            // _sliderPromos.classList.toggle('is-draggable');
+            // flickity.resize();
         }
     });
 };

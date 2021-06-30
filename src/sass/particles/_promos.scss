@@ -29,6 +29,7 @@
 
 .slider-promos {
   width: 100%;
+  display: block;
 
   &__page-dots {
     .page-dots {
@@ -194,39 +195,27 @@
   }
 }
 
-@media screen and (min-width: 720px) {
+.playerEvt {
+  pointer-events: all;
+}
+
+@media screen and (min-width: 830px) {
   .promos {
-    &__container {
-      padding: 0;
-      margin: 0 auto;
-    }
-
-    &__slider {
-      //margin: 32px -12px -20px;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      align-items: center;
-      justify-content: space-between;
-    }
-
     &__controls {
       display: none;
+    }
+
+    .flickity-viewport {
+      width: 100%;
     }
   }
 
   .slider-promos {
+    display: flex;
+
     &__item {
-      width: 50%;
-      margin: 0;
-      padding: 20px 12px;
-    }
-  }
-
-  .promos-grid {
-    display: block;
-
-    &__content {
+      width: calc(50% - 10px);
+      //margin-left: 20px;
     }
   }
 
