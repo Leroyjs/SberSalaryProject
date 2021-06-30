@@ -64,64 +64,59 @@ export const initPromoSlider = () => {
         '.slider-promos__button_next'
     );
     const _pageDots = _sliderControls.querySelector('.page-dots');
-    const mql_720 = window.matchMedia("screen and (min-width: 720px)");
 
-    function initFlickity(slider) {
-        const dotsArray = [];
-        let activeDot = null;
-        const sliderOptions = {
-            cellAlign: 'center',
-            percentPosition: false,
-            prevNextButtons: false,
-            wrapAround: false,
-            pageDots: false,
-            on: {
-                change: function (index) {
-                    activeDot && activeDot.classList.remove('page-dots__dot_active');
-                    activeDot = dotsArray[index];
-                    activeDot.classList.add('page-dots__dot_active');
-                }
+    const dotsArray = [];
+    let activeDot = null;
+    const sliderOptions = {
+        cellAlign: 'center',
+        percentPosition: false,
+        prevNextButtons: false,
+        wrapAround: false,
+        pageDots: false,
+        on: {
+            change: function (index) {
+                activeDot && activeDot.classList.remove('page-dots__dot_active');
+                activeDot = dotsArray[index];
+                activeDot.classList.add('page-dots__dot_active');
             }
         }
-
-        slider = new Flickity(_sliderPromos, sliderOptions);
-
-        for (let i = 0; i < slider.slides.length; i++) {
-            const dotElement = document.createElement('li');
-
-            dotElement.addEventListener('click', () => {
-                promoSlider.select(i);
-            });
-
-            if (i == 0) {
-                dotElement.classList.add('page-dots__dot');
-                dotElement.classList.add('page-dots__dot_active');
-                activeDot = dotElement;
-            } else dotElement.classList.add('page-dots__dot');
-
-            _pageDots.appendChild(dotElement);
-            dotsArray.push(dotElement);
-        }
-
-        _prevItem.addEventListener('click', () => {
-            promoSlider.next();
-        });
-
-        _nextItem.addEventListener('click', () => {
-            promoSlider.previous();
-        });
     }
 
-    if (!mql_720.matches) {
-        initFlickity(_sliderPromos);
+    let promoSlider = new Flickity(_sliderPromos, sliderOptions);
+
+    for (let i = 0; i < promoSlider.slides.length; i++) {
+        const dotElement = document.createElement('li');
+
+        dotElement.addEventListener('click', () => {
+            promoSlider.select(i);
+        });
+
+        if (i == 0) {
+            dotElement.classList.add('page-dots__dot');
+            dotElement.classList.add('page-dots__dot_active');
+            activeDot = dotElement;
+        } else dotElement.classList.add('page-dots__dot');
+
+        _pageDots.appendChild(dotElement);
+        dotsArray.push(dotElement);
     }
 
-    // replaceChild
+    _prevItem.addEventListener('click', () => {
+        promoSlider.next();
+    });
+
+    _nextItem.addEventListener('click', () => {
+        promoSlider.previous();
+    });
+
+    const mql_720 = window.matchMedia("screen and (min-width: 720px)");
+    mql_720.matches && promoSlider.destroy();
+
     mql_720.addEventListener('change', (e) => {
         if (e.matches) {
-            // promoSlider.destroy();
+            promoSlider.destroy();
         } else {
-            initFlickity(_sliderPromos);
+            promoSlider = new Flickity(_sliderPromos, sliderOptions);
         }
     });
 };
