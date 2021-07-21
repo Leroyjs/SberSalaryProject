@@ -40,6 +40,7 @@ export const initVideoPlayers = () => {
                     height: '100%',
                     width: '100%',
                     videoId,
+                    playsinline: 1,
                     events: {
                         onReady: onPlayerReady
                     }
