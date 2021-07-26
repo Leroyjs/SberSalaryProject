@@ -10,7 +10,7 @@ export const initPreloader = () => {
         preloaderInit();
       });
     }
-  }, 1000);
+  }, 2000);
   setTimeout(() => {
     if (!preloaderIsDone) {
       preloaderInit();

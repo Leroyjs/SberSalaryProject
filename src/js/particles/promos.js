@@ -5,52 +5,36 @@ import 'flickity/dist/flickity.min.css';
 export const initVideoPlayers = () => {
     const players = document.querySelectorAll('.player');
 
-    players.forEach(item => {
-        initVideo(item);
-    });
+    // players.forEach(item => {
+    //     initVideo(item);
+    // });
 
     function initVideo(item) {
-        const videoId = item.getAttribute('data-video-id');
-        const playerCover = item.firstChild.nextElementSibling;
-        playerCover.style.backgroundImage = `url('https://img.youtube.com/vi/${videoId}/maxresdefault.jpg')`;
+        // const videoId = item.getAttribute('data-video-id');
+        // const playerCover = item.firstChild.nextElementSibling;
+        // playerCover.style.backgroundImage = `url('https://img.youtube.com/vi/${videoId}/maxresdefault.jpg')`;
 
-        item.addEventListener('click', () => {
-            let player;
+        // item.addEventListener('click', () => {
+        //     let player;
 
-            let firstScriptTag = document.getElementsByTagName('script')[0];
-            let secScriptTag = document.getElementsByTagName('script')[1];
+        //     console.log("init")
+        //     createNewPlayer();
+        //     function createNewPlayer() {
+        //         player = new YT.Player(item, {
+        //             height: '100%',
+        //             width: '100%',
+        //             videoId,
+        //             playsinline: 1,
+        //             events: {
+        //                 onReady: onPlayerReady
+        //             }
+        //         });
+        //     }
+        // });
 
-            const isYT =
-                firstScriptTag.getAttribute('src') ===
-                'https://www.youtube.com/iframe_api' ||
-                secScriptTag.getAttribute('src') ===
-                'https://www.youtube.com/iframe_api';
-
-            if (!isYT) {
-                let tag = document.createElement('script');
-                tag.src = 'https://www.youtube.com/iframe_api';
-                firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-                // createNewPlayer();
-            } else {
-                createNewPlayer();
-            }
-
-            function createNewPlayer() {
-                player = new YT.Player(item, {
-                    height: '100%',
-                    width: '100%',
-                    videoId,
-                    playsinline: 1,
-                    events: {
-                        onReady: onPlayerReady
-                    }
-                });
-            }
-        });
-
-        function onPlayerReady(event) {
-            event.target.playVideo();
-        }
+        // function onPlayerReady(event) {
+        //     event.target.playVideo();
+        // }
     }
 };
 
