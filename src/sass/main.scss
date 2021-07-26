@@ -9,6 +9,7 @@
 @import "./particles/acquainted";
 @import './particles/gold-card';
 @import './particles/form-section';
+@import './particles/checkbox';
 
 .main-button {
   transition: opacity .2s, visibility .2s .0s, transform .2s;
@@ -32,7 +33,7 @@
   }
 }
 
-@media screen and (min-width:600px) {
+@media screen and (min-width: 600px) {
   .main-button {
     &__wrapper {
       bottom: 30px;
@@ -42,7 +43,7 @@
   }
 }
 
-@media screen and (min-width:600px) {
+@media screen and (min-width: 600px) {
   .main-button {
     &__wrapper {
       bottom: 40px;

@@ -149,9 +149,9 @@
     <div class="ancor" id="form-section-ancor"></div>
     <div class="form-section__inner">
         <h2 class="title title_color_green form-section__title">
-            Если у Вас остались вопросы <br>    
-            напишите нам и вам позвонит 
-            менеджер Банка, закреплённый 
+            Если у Вас остались вопросы <br>
+            напишите нам и вам позвонит
+            менеджер Банка, закреплённый
             за вашим предприятием
         </h2>
         <span class="form-section__hello desc desc_color_gray">Здравствуйте, сотрудник <span
@@ -171,13 +171,24 @@
                        id="form-main-input-company">
                 <div id="form-main-company-error" class="form-main__error">Текст ошибки</div>
             </div>
+            <div class="form-main__input-wrapper">
+                <label class="checkbox">
+                    <input class="css-checkbox form-main__input"
+                           id="form-main-input-personal-policy"
+                           required
+                           type="checkbox">
+                    <i></i>
+                    <span class="desc desc_color_gray">
+                        Соглашаюсь с условиями обработки <a class="link" target="_blank"
+                                                            href="https://www.sber.ru/personal_policy">
+                        персональных данных
+                    </a>
+                    </span>
+                </label>
+                <div id="form-main-personal-policy-error" class="form-main__error">Текст ошибки</div>
+            </div>
             <button class="button button_green form-main__button">Оставить заявку на звонок</button>
         </form>
-        <div class="form-section__personal-policy desc desc_color_gray">
-            Нажимая на&nbsp;кнопку &laquo;Отправить&raquo;, я&nbsp;соглашаюсь с&nbsp;условиями обработки <a target="_blank" href="https://www.sberbank.ru/ru/inform"
-                                                                                                            class="link">персональных
-            данных</a>
-        </div>
         <a href="" class="form-section__application-form">
             <img src="media/pdf-icon.svg" alt="" class="form-section__application-form-icon">
             <span class="link desc">Форма заявления</span>
